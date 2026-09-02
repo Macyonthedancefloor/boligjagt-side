@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Boligjagt København</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --ground:#F7F5F1; --surface:#FFFFFF; --surface-2:#F2EFE9;
+    --ink:#221E19; --muted:#6E655A; --line:#E3DCD1;
+    --patina:#24685A; --patina-strong:#1A5045; --patina-wash:#E4EFEA;
+    --brick:#A6432B; --brick-wash:#F6E7E1; --shadow:rgba(34,30,25,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#151310; --surface:#1E1B17; --surface-2:#262219;
+      --ink:#F1ECE4; --muted:#A69C8D; --line:#332E27;
+      --patina:#57AE96; --patina-strong:#79C4AE; --patina-wash:#1B322C;
+      --brick:#DB8161; --brick-wash:#38231A; --shadow:rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#151310; --surface:#1E1B17; --surface-2:#262219;
+    --ink:#F1ECE4; --muted:#A69C8D; --line:#332E27;
+    --patina:#57AE96; --patina-strong:#79C4AE; --patina-wash:#1B322C;
+    --brick:#DB8161; --brick-wash:#38231A; --shadow:rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--ground); color:var(--ink); margin:0;
+    font-family:'Archivo',system-ui,-apple-system,sans-serif;
+    line-height:1.55; padding:20px 16px 64px; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:640px;margin:0 auto;}
+  .head{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;
+        margin-bottom:20px;border-bottom:2px solid var(--ink);}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0;
+     font-size:clamp(28px,7vw,38px);line-height:1.05;letter-spacing:-.015em;}
+  .stamp{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11.5px;
+         letter-spacing:.07em;text-transform:uppercase;font-weight:600;color:var(--muted);}
+  .stamp b{color:var(--ink);font-weight:700;}
+
+  /* profil */
+  details.profil{background:var(--surface-2);border-radius:12px;
+                 margin-bottom:22px;border:1px solid var(--line);}
+  details.profil > summary{
+    cursor:pointer;padding:13px 16px;font-weight:600;font-size:14.5px;
+    list-style:none;display:flex;align-items:center;gap:8px;min-height:44px;
+  }
+  details.profil > summary::-webkit-details-marker{display:none;}
+  details.profil > summary::after{content:"▸";margin-left:auto;color:var(--muted);}
+  details.profil[open] > summary::after{content:"▾";}
+  .profil-krop{padding:0 16px 16px;display:flex;flex-direction:column;gap:11px;}
+  .profil-krop p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .felt{display:flex;flex-direction:column;gap:4px;}
+  .felt label{font-size:12.5px;font-weight:600;}
+  .felt input, .felt textarea{
+    font:inherit;font-size:15px;padding:9px 11px;border-radius:9px;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%;
+  }
+  .felt textarea{min-height:74px;resize:vertical;line-height:1.5;}
+  .felt input:focus,.felt textarea:focus{
+    outline:none;border-color:var(--patina);box-shadow:0 0 0 3px var(--patina-wash);}
+  .gemt{font-size:13px;color:var(--patina-strong);font-weight:600;min-height:18px;}
+
+  /* kort */
+  .list{display:flex;flex-direction:column;gap:16px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+        box-shadow:0 1px 2px var(--shadow);overflow:hidden;}
+  .card-top{padding:16px 16px 14px;}
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px;}
+  .badge{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+         padding:3px 8px;border-radius:5px;}
+  .badge.fresh{background:var(--patina-wash);color:var(--patina-strong);}
+  .badge.age,.badge.kilde{background:var(--surface-2);color:var(--muted);}
+  .badge.warn{background:var(--brick-wash);color:var(--brick);}
+  .addr{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;
+        line-height:1.15;margin:0 0 2px;}
+  .area{color:var(--muted);font-size:14px;margin:0 0 12px;}
+  .facts{display:flex;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  .fact{flex:1;padding:10px 4px 2px;}
+  .fact + .fact{border-left:1px solid var(--line);padding-left:12px;}
+  .fact .k{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+           color:var(--muted);font-weight:600;}
+  .fact .v{font-size:16px;font-weight:600;}
+  .obs{margin:12px 0 0;padding:9px 11px;border-radius:8px;font-size:13px;line-height:1.45;
+       background:var(--brick-wash);color:var(--brick);}
+  .obs b{font-weight:700;}
+  .actions{display:flex;gap:8px;padding:0 16px 16px;flex-wrap:wrap;}
+  .btn{font:inherit;font-size:14.5px;font-weight:600;border-radius:9px;padding:10px 15px;
+       cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;
+       justify-content:center;gap:7px;flex:1 1 auto;min-height:44px;text-decoration:none;
+       transition:background .13s ease,color .13s ease,border-color .13s ease;}
+  .btn-copy{background:var(--patina);color:#FBFDFC;}
+  .btn-copy:hover{background:var(--patina-strong);}
+  .btn-copy.done{background:var(--brick);}
+  .btn-see{background:transparent;color:var(--patina-strong);border-color:var(--line);}
+  .btn-see:hover{background:var(--surface-2);border-color:var(--patina);}
+  .btn:focus-visible{outline:2px solid var(--patina);outline-offset:2px;}
+  .toggle{background:none;border:0;font:inherit;font-size:13px;font-weight:600;
+          color:var(--muted);cursor:pointer;padding:0 16px 14px;display:flex;
+          align-items:center;gap:6px;min-height:38px;}
+  .toggle:hover{color:var(--ink);}
+  .msg{margin:0 16px 16px;padding:15px 16px;background:var(--surface-2);border-radius:10px;
+       font-family:'Fraunces',Georgia,serif;font-size:15px;line-height:1.6;
+       white-space:pre-wrap;word-break:break-word;}
+  .msg[hidden]{display:none;}
+  .note{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+        font-size:13.5px;color:var(--muted);line-height:1.6;}
+  .note strong{color:var(--ink);font-weight:600;}
+  .note p{margin:0 0 10px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+  @media (min-width:560px){body{padding:36px 24px 72px;}.actions .btn{flex:0 1 auto;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <h1>Boligjagt København</h1>
+    <div class="stamp" id="stamp"></div>
+  </header>
+
+  <details class="profil" id="profil">
+    <summary>Dine oplysninger</summary>
+    <div class="profil-krop">
+      <p>Gemmes kun i denne browser på denne enhed. De sendes ingen steder hen
+         og indgår ikke i selve siden. Udfyld én gang, så bygger siden beskeden
+         for dig.</p>
+      <div class="felt">
+        <label for="p-navn">Navn</label>
+        <input id="p-navn" autocomplete="name" placeholder="Fornavn">
+      </div>
+      <div class="felt">
+        <label for="p-om">Om dig og din situation</label>
+        <textarea id="p-om" placeholder="Skriv et par sætninger om hvem I er, hvorfor I søger, og hvornår I kan flytte ind."></textarea>
+      </div>
+      <div class="felt">
+        <label for="p-kontakt">Telefon og mail</label>
+        <input id="p-kontakt" placeholder="+45 ... og din@mail.dk">
+      </div>
+      <div class="gemt" id="gemt"></div>
+    </div>
+  </details>
+
+  <div class="list" id="list"></div>
+
+  <div class="note">
+    <p><strong>Læs beskeden igennem inden du sender.</strong> Ret gerne en sætning,
+       så den lyder som dig. Det er det, der giver svar.</p>
+    <p>Siden opdaterer sig selv cirka hvert kvarter. Boliger går hurtigt, så nogle
+       kan allerede være væk.</p>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var DATA = {"opdateret": "2. sep. 2026 kl. 10.37", "antal": 20, "nye": 0, "boliger": [{"id": "5666448", "vej": "Taastrup have", "omraade": "Taastrup", "husleje": "8.000 kr.", "stoerrelse": "60 m²", "alder": "lige nu", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/60m2-2-vaer-id-5666448", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666600", "vej": "Broholms Alle", "omraade": "Charlottenlund", "husleje": "7.500 kr.", "stoerrelse": "61 m²", "alder": "lige nu", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5666600", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "hh-8095", "vej": "Ryesgade", "omraade": "København", "husleje": "12.500 kr.", "stoerrelse": "51 m²", "alder": "set lige nu", "url": "https://homesandhousing.dk/lejlighed/ryesgade-112b-3-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "50.750", "ledig": "01-10-2026"}, {"id": "hh-12171", "vej": "Vedbæk Stationsvej", "omraade": "Vedbæk", "husleje": "12.500 kr.", "stoerrelse": "72 m²", "alder": "set lige nu", "url": "https://homesandhousing.dk/lejlighed/vedbaek-stationsvej-13b-1-sal", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "51.000", "ledig": "01-11-2026"}, {"id": "hh-14291", "vej": "Ordrupvej", "omraade": "Charlottenlund", "husleje": "9.150 kr.", "stoerrelse": "71 m²", "alder": "set lige nu", "url": "https://homesandhousing.dk/lejlighed/ordrupvej-161-1-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "64.950", "ledig": "01-09-2026"}, {"id": "5530506", "vej": "Niels Finsens Alle", "omraade": "Søborg", "husleje": "6.000 kr.", "stoerrelse": "51 m²", "alder": "1 time siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/51m2-2-vaer-id-5530506", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666466", "vej": "Mekanikvej", "omraade": "Brøndby", "husleje": "11.400 kr.", "stoerrelse": "59 m²", "alder": "16 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/59m2-2-vaer-id-5666466", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666431", "vej": "Sankt Nikolaj Vej", "omraade": "Frederiksberg C", "husleje": "8.800 kr.", "stoerrelse": "54 m²", "alder": "18 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666431", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666365", "vej": "Østbrovej", "omraade": "Glostrup", "husleje": "6.191,98 kr.", "stoerrelse": "54 m²", "alder": "20 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666365", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5371535", "vej": "Bydammen", "omraade": "Ballerup", "husleje": "11.800 kr.", "stoerrelse": "78 m²", "alder": "21 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/78m2-2-vaer-id-5371535", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666230", "vej": "Filmbyen", "omraade": "Hvidovre", "husleje": "10.850 kr.", "stoerrelse": "66 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/66m2-2-vaer-id-5666230", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5350475", "vej": "Ericavej", "omraade": "Gentofte", "husleje": "9.000 kr.", "stoerrelse": "61 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5350475", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666033", "vej": "Rådvadsvej", "omraade": "København NV", "husleje": "12.000 kr.", "stoerrelse": "55 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/55m2-2-vaer-id-5666033", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5646502", "vej": "Grankoglen", "omraade": "Glostrup", "husleje": "11.900 kr.", "stoerrelse": "61 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5646502", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665972", "vej": "Baneleddet", "omraade": "Brøndby", "husleje": "11.995 kr.", "stoerrelse": "60 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/60m2-2-vaer-id-5665972", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665927", "vej": "Virkelund Allé", "omraade": "Albertslund", "husleje": "11.950 kr.", "stoerrelse": "71 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/71m2-2-vaer-id-5665927", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665922", "vej": "Kingosgade", "omraade": "Frederiksberg C", "husleje": "12.000 kr.", "stoerrelse": "57 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-5665922", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665880", "vej": "Telegrafvej", "omraade": "Ballerup", "husleje": "11.995 kr.", "stoerrelse": "69 m²", "alder": "2 dage siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/69m2-2-vaer-id-5665880", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665857", "vej": "Filmbyen", "omraade": "Hvidovre", "husleje": "10.850 kr.", "stoerrelse": "66 m²", "alder": "2 dage siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/66m2-2-vaer-id-5665857", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665642", "vej": "Bobakken", "omraade": "Vanløse", "husleje": "12.000 kr.", "stoerrelse": "53 m²", "alder": "2 dage siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/53m2-2-vaer-id-5665642", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}]};
+  if (!DATA) return;
+
+  var NOEGLE = "boligjagt-profil";
+
+  function laesProfil(){
+    try {
+      var raa = localStorage.getItem(NOEGLE);
+      return raa ? JSON.parse(raa) : {};
+    } catch (e) { return {}; }
+  }
+  function gemProfil(p){
+    try { localStorage.setItem(NOEGLE, JSON.stringify(p)); return true; }
+    catch (e) { return false; }
+  }
+
+  var profil = laesProfil();
+  var fNavn = document.getElementById("p-navn");
+  var fOm = document.getElementById("p-om");
+  var fKontakt = document.getElementById("p-kontakt");
+  var kvittering = document.getElementById("gemt");
+
+  fNavn.value = profil.navn || "";
+  fOm.value = profil.om || "";
+  fKontakt.value = profil.kontakt || "";
+
+  if (!profil.navn && !profil.om) document.getElementById("profil").open = true;
+
+  var gemTimer;
+  function gemNu(){
+    profil = { navn: fNavn.value.trim(), om: fOm.value.trim(), kontakt: fKontakt.value.trim() };
+    kvittering.textContent = gemProfil(profil)
+      ? "Gemt i denne browser."
+      : "Kunne ikke gemme. Browseren blokerer måske lagring.";
+    clearTimeout(gemTimer);
+    gemTimer = setTimeout(function(){ kvittering.textContent = ""; }, 2500);
+    tegn();
+  }
+  [fNavn, fOm, fKontakt].forEach(function(f){ f.addEventListener("change", gemNu); });
+
+  function besked(b){
+    var hvor = b.vej || b.omraade;
+    var dele = ["Hej,", ""];
+    var indledning = "Jeg skriver, fordi jeg er meget interesseret i lejligheden på " + hvor + ".";
+    dele.push(profil.om ? indledning + " " + profil.om : indledning);
+    dele.push("");
+    if (b.husleje) { dele.push("Huslejen på " + b.husleje + " passer fint med vores budget."); dele.push(""); }
+    dele.push("Jeg kommer meget gerne forbi til en fremvisning og fortæller mere. Du er velkommen til at skrive eller ringe. Jeg håber at høre fra dig.");
+    dele.push("");
+    dele.push("Mange hilsner");
+    if (profil.navn) dele.push(profil.navn);
+    if (profil.kontakt) dele.push(profil.kontakt);
+    return dele.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  function el(tag, cls, tekst){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (tekst != null) n.textContent = tekst;
+    return n;
+  }
+
+  document.getElementById("stamp").innerHTML =
+    "<span>Opdateret <b>" + DATA.opdateret + "</b></span>" +
+    "<span><b>" + DATA.antal + "</b> lejligheder</span>" +
+    (DATA.nye ? "<span><b>" + DATA.nye + "</b> nye</span>" : "");
+
+  var liste = document.getElementById("list");
+
+  function tegn(){
+    liste.textContent = "";
+    DATA.boliger.forEach(function(b, i){
+      var tekst = besked(b);
+      var card = el("article", "card");
+      var top = el("div", "card-top");
+
+      var badges = el("div", "badges");
+      if (b.ny) badges.appendChild(el("span", "badge fresh", "Ny"));
+      if (b.alder) badges.appendChild(el("span", "badge age", b.alder));
+      if (b.kilde && b.kilde !== "BoligPortal") badges.appendChild(el("span","badge kilde",b.kilde));
+      if (b.advarsel) badges.appendChild(el("span", "badge warn", "Tjek ekstra"));
+      if (b.expat) badges.appendChild(el("span", "badge warn", "Kun expats"));
+      top.appendChild(badges);
+
+      top.appendChild(el("h2", "addr", b.vej || b.omraade));
+      top.appendChild(el("p", "area", b.omraade));
+
+      var facts = el("div", "facts");
+      [["Husleje", b.husleje], ["Størrelse", b.stoerrelse]].forEach(function(par){
+        if (!par[1]) return;
+        var f = el("div", "fact");
+        f.appendChild(el("span", "k", par[0]));
+        f.appendChild(el("span", "v", par[1]));
+        facts.appendChild(f);
+      });
+      if (facts.children.length) top.appendChild(facts);
+
+      if (b.expat) {
+        var e = el("p", "obs");
+        e.innerHTML = "<b>Udlejer skriver at boligen kun tilbydes til expats.</b> Du kan skrive alligevel, men regn med et nej.";
+        top.appendChild(e);
+      }
+      if (b.advarsel) {
+        var w = el("p", "obs");
+        w.innerHTML = "<b>Usædvanlig lav husleje.</b> Det kan være helt reelt, men det er også et klassisk svindelmønster. Betal aldrig depositum før du har set lejligheden og mødt udlejeren.";
+        top.appendChild(w);
+      }
+      if (b.indflytning) {
+        top.appendChild(el("p", "obs", "Indflytningspris oplyst til " + b.indflytning + " kr."
+          + (b.ledig ? " Ledig fra " + b.ledig + "." : "")));
+      }
+      card.appendChild(top);
+
+      var actions = el("div", "actions");
+      var kopi = el("button", "btn btn-copy", "Kopiér besked");
+      kopi.type = "button";
+      actions.appendChild(kopi);
+      var link = el("a", "btn btn-see", "Se annonce");
+      link.href = b.url; link.target = "_blank"; link.rel = "noopener noreferrer";
+      actions.appendChild(link);
+      card.appendChild(actions);
+
+      var vis = el("button", "toggle");
+      vis.type = "button";
+      var mid = "m" + i;
+      vis.setAttribute("aria-expanded", "false");
+      vis.setAttribute("aria-controls", mid);
+      var label = el("span", null, "Vis beskeden");
+      vis.appendChild(label);
+      card.appendChild(vis);
+
+      var msg = el("div", "msg", tekst);
+      msg.id = mid; msg.hidden = true;
+      card.appendChild(msg);
+
+      vis.addEventListener("click", function(){
+        var aaben = vis.getAttribute("aria-expanded") === "true";
+        vis.setAttribute("aria-expanded", aaben ? "false" : "true");
+        msg.hidden = aaben;
+        label.textContent = aaben ? "Vis beskeden" : "Skjul beskeden";
+      });
+
+      kopi.addEventListener("click", function(){
+        kopier(tekst, function(ok){
+          kopi.textContent = ok ? "Kopieret" : "Kunne ikke kopiere";
+          kopi.classList.add("done");
+          setTimeout(function(){
+            kopi.textContent = "Kopiér besked"; kopi.classList.remove("done");
+          }, 1900);
+          if (!ok) { msg.hidden = false; vis.setAttribute("aria-expanded","true");
+                     label.textContent = "Skjul beskeden"; }
+        });
+      });
+
+      liste.appendChild(card);
+    });
+  }
+
+  function kopier(tekst, saa){
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(tekst).then(
+        function(){ saa(true); },
+        function(){ saa(gammelKopi(tekst)); }
+      );
+      return;
+    }
+    saa(gammelKopi(tekst));
+  }
+
+  function gammelKopi(tekst){
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = tekst; ta.setAttribute("readonly","");
+      ta.style.position = "fixed"; ta.style.top = "-1000px";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return !!ok;
+    } catch (e) { return false; }
+  }
+
+  tegn();
+})();
+</script>
+</body>
+</html>

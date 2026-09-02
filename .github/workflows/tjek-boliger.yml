@@ -1,0 +1,55 @@
+name: Tjek boliger
+
+on:
+  schedule:
+    # Cirka hvert kvarter. GitHub koerer i UTC og er ofte nogle minutter
+    # forsinket naar der er travlt.
+    - cron: "6,21,36,51 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tjek-boliger
+  cancel-in-progress: false
+
+jobs:
+  tjek:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hent repoet
+        uses: actions/checkout@v5
+
+      # Ubuntu-maskinen har allerede Python 3.
+      - name: Hent boliger og byg siden
+        run: python3 hent.py
+
+      - name: Gem aendringer
+        run: |
+          if [ -z "$(git status --porcelain index.html state.json)" ]; then
+            echo "Ingen aendringer at gemme."
+            exit 0
+          fi
+          git config user.name "boligjagt-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html state.json
+          git commit -m "Opdater boliger $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          # Er der skubbet noget op imens, saa hent det ned og byg forfra.
+          # Begge filer genereres fra bunden, saa der er intet at flette.
+          for forsoeg in 1 2 3; do
+            if git push; then
+              echo "Skubbet op i forsoeg $forsoeg."
+              exit 0
+            fi
+            echo "Push afvist, bygger forfra (forsoeg $forsoeg)."
+            git fetch origin main
+            git reset --hard origin/main
+            python3 hent.py
+            git add index.html state.json
+            git diff --cached --quiet && { echo "Intet nyt."; exit 0; }
+            git commit -m "Opdater boliger $(date -u '+%Y-%m-%d %H:%M UTC')"
+          done
+          echo "Kunne ikke skubbe op efter 3 forsoeg." >&2
+          exit 1
