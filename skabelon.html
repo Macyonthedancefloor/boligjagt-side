@@ -71,6 +71,9 @@
   .list{display:flex;flex-direction:column;gap:16px;}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
         box-shadow:0 1px 2px var(--shadow);overflow:hidden;}
+  .foto{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;
+        background:var(--surface-2);border-bottom:1px solid var(--line);}
+  .foto[hidden]{display:none;}
   .card-top{padding:16px 16px 14px;}
   .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px;}
   .badge{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
@@ -236,6 +239,21 @@
     DATA.boliger.forEach(function(b, i){
       var tekst = besked(b);
       var card = el("article", "card");
+
+      if (b.billede) {
+        var foto = document.createElement("img");
+        foto.className = "foto";
+        foto.src = b.billede;
+        foto.alt = "Foto af boligen på " + (b.vej || b.omraade);
+        foto.loading = "lazy";
+        foto.decoding = "async";
+        foto.referrerPolicy = "no-referrer";
+        // Er billedet vaek hos udbyderen, skjuler vi det i stedet for at
+        // efterlade et tomt felt.
+        foto.addEventListener("error", function(){ foto.hidden = true; });
+        card.appendChild(foto);
+      }
+
       var top = el("div", "card-top");
 
       var badges = el("div", "badges");

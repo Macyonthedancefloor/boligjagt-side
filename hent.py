@@ -94,6 +94,10 @@ def parse_annoncer(side):
         husleje = find(r'<span class="font-bold">(.*?)</span>')
         alder_tekst = find(r'<span class="text-muted text-xs">(.*?)</span>')
 
+        # Foerste billede paa kortet. Kortet har typisk fem.
+        billede = re.search(r'<img[^>]*\bsrc="([^"]+)"', krop)
+        billede = html.unescape(billede.group(1)) if billede else None
+
         stoerrelse = re.search(r"(\d+)\s*m²", titel)
         dele = [d.strip() for d in sted.split(",")]
         omraade = dele[0]
@@ -108,6 +112,7 @@ def parse_annoncer(side):
             "husleje": husleje,
             "stoerrelse": stoerrelse.group(1) + " m²" if stoerrelse else None,
             "alder_tekst": alder_tekst,
+            "billede": billede,
         })
     return fundne
 
@@ -178,6 +183,9 @@ def hent_homesandhousing():
                 "husleje": f"{bolig.get('monthlyRent')} kr.",
                 "stoerrelse": (bolig.get("squarefeet") or "") + " m²"
                               if bolig.get("squarefeet") else None,
+                "billede": ("https://homesandhousing.dk"
+                            + (bolig.get("galleri") or "").split(";")[0])
+                           if (bolig.get("galleri") or "").strip() else None,
                 "alder_tekst": None,          # api'et oplyser ikke hvornaar den blev lagt op
                 "kun_expats": bool(re.search(r"expat", beskrivelse, re.I)),
                 "ledig_fra": bolig.get("readyFromDate"),
@@ -276,6 +284,7 @@ def byg_side(annoncer, nye_ider, nu):
     for a in annoncer:
         data.append({
             "id": a["id"],
+            "billede": a.get("billede") or "",
             "vej": a.get("vej") or a.get("omraade") or "",
             "omraade": a.get("omraade") or "",
             "husleje": a.get("husleje") or "",
