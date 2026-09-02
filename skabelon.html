@@ -91,7 +91,6 @@
   .badge.fresh{background:var(--patina-wash);color:var(--patina-strong);}
   .badge.age,.badge.kilde{background:var(--surface-2);color:var(--muted);}
   .badge.warn{background:var(--brick-wash);color:var(--brick);}
-  .badge.fri{background:var(--patina);color:#FBFDFC;}
   .addr{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;
         line-height:1.15;margin:0 0 2px;}
   .area{color:var(--muted);font-size:14px;margin:0 0 12px;}
@@ -180,10 +179,6 @@
     <label class="afkryds">
       <input id="f-expat" type="checkbox">
       <span>Skjul boliger kun for expats</span>
-    </label>
-    <label class="afkryds">
-      <input id="f-fri" type="checkbox">
-      <span>Kun dem jeg kan skrive til gratis</span>
     </label>
     <div class="filter-svar" id="filter-svar"></div>
   </div>
@@ -278,7 +273,6 @@
   var fMax = document.getElementById("f-max");
   var fAconto = document.getElementById("f-aconto");
   var fExpat = document.getElementById("f-expat");
-  var fFri = document.getElementById("f-fri");
   var fSvar = document.getElementById("filter-svar");
 
   // Foerste besoeg starter paa 12.000, saa listen ikke pludselig fyldes med
@@ -296,20 +290,18 @@
   fMax.value = filter.max != null ? filter.max : "";
   fAconto.checked = !!filter.medAconto;
   fExpat.checked = !!filter.skjulExpat;
-  fFri.checked = !!filter.kunFri;
 
   function gemFilter(){
     filter = {
       min: fMin.value === "" ? null : Number(fMin.value),
       max: fMax.value === "" ? null : Number(fMax.value),
       medAconto: fAconto.checked,
-      skjulExpat: fExpat.checked,
-      kunFri: fFri.checked
+      skjulExpat: fExpat.checked
     };
     try { localStorage.setItem(F_NOEGLE, JSON.stringify(filter)); } catch (e) {}
     tegn();
   }
-  [fMin, fMax, fAconto, fExpat, fFri].forEach(function(f){
+  [fMin, fMax, fAconto, fExpat].forEach(function(f){
     f.addEventListener("change", gemFilter);
   });
 
@@ -321,7 +313,6 @@
 
   function slipperIgennem(b){
     if (filter.skjulExpat && b.expat) return false;
-    if (filter.kunFri && !b.fri) return false;
     var pris = udgift(b);
     // En bolig uden oplyst pris skjules ikke, den kan jo vaere den rigtige.
     if (!pris) return true;
@@ -338,7 +329,6 @@
     if (filter.min != null) beskrivelse.push("fra " + filter.min.toLocaleString("da-DK") + " kr.");
     if (filter.max != null) beskrivelse.push("til " + filter.max.toLocaleString("da-DK") + " kr.");
     if (filter.skjulExpat) beskrivelse.push("uden expat-boliger");
-    if (filter.kunFri) beskrivelse.push("kun fri kontakt");
     fSvar.textContent = vist.length === DATA.boliger.length && !beskrivelse.length
       ? "Viser alle " + DATA.boliger.length + " boliger."
       : "Viser " + vist.length + " af " + DATA.boliger.length
@@ -374,7 +364,6 @@
       var badges = el("div", "badges");
       if (b.ny) badges.appendChild(el("span", "badge fresh", "Ny"));
       if (b.alder) badges.appendChild(el("span", "badge age", b.alder));
-      if (b.fri) badges.appendChild(el("span", "badge fri", "Fri kontakt"));
       if (b.kilde && b.kilde !== "BoligPortal") badges.appendChild(el("span","badge kilde",b.kilde));
       if (b.advarsel) badges.appendChild(el("span", "badge warn", "Tjek ekstra"));
       if (b.expat) badges.appendChild(el("span", "badge warn", "Kun expats"));
@@ -409,10 +398,6 @@
         top.appendChild(el("p", "udgift", linje));
       }
 
-      if (!b.fri) {
-        top.appendChild(el("p", "udgift",
-          "BoligPortal kræver betalt medlemskab for at skrive til denne udlejer."));
-      }
       if (b.expat) {
         var e = el("p", "obs");
         e.innerHTML = "<b>Udlejer skriver at boligen kun tilbydes til expats.</b> Du kan skrive alligevel, men regn med et nej.";

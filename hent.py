@@ -94,11 +94,6 @@ def parse_annoncer(side):
         husleje = find(r'<span class="font-bold">(.*?)</span>')
         alder_tekst = find(r'<span class="text-muted text-xs">(.*?)</span>')
 
-        # "Fri kontakt" betyder at man maa skrive til udlejeren uden et
-        # betalt medlemskab hos BoligPortal. Uden det kan man se annoncen,
-        # men ikke sende noget.
-        fri_kontakt = "Fri kontakt" in krop
-
         # Foerste billede paa kortet. Kortet har typisk fem.
         billede = re.search(r'<img[^>]*\bsrc="([^"]+)"', krop)
         billede = html.unescape(billede.group(1)) if billede else None
@@ -118,7 +113,6 @@ def parse_annoncer(side):
             "stoerrelse": stoerrelse.group(1) + " m²" if stoerrelse else None,
             "alder_tekst": alder_tekst,
             "billede": billede,
-            "fri_kontakt": fri_kontakt,
         })
     return fundne
 
@@ -189,7 +183,6 @@ def hent_homesandhousing():
                 "husleje": f"{bolig.get('monthlyRent')} kr.",
                 "stoerrelse": (bolig.get("squarefeet") or "") + " m²"
                               if bolig.get("squarefeet") else None,
-                "fri_kontakt": True,   # bureauet har ingen betalingsmur
                 "aconto": (str(bolig.get("aCForbrug")) + " kr.")
                           if bolig.get("aCForbrug") else None,
                 "billede": ("https://homesandhousing.dk"
@@ -334,7 +327,6 @@ def byg_side(annoncer, nye_ider, nu):
             "ny": a["id"] in nye_ider,
             "expat": bool(a.get("kun_expats")),
             "advarsel": bool(a.get("advarsel")),
-            "fri": bool(a.get("fri_kontakt")),
             "aconto": a.get("aconto") or "",
             "depositum": a.get("depositum") or "",
             "forudbetalt": a.get("forudbetalt") or "",
