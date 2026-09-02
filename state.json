@@ -10,6 +10,17 @@
   "oprettet": "2026-09-02T11:27:33.900157+02:00",
   "vej": "Australiensvej"
  },
+ "4766812": {
+  "detaljer": {
+   "aconto": "1.500 kr.",
+   "depositum": "29.000 kr.",
+   "forudbetalt": "16.000 kr.",
+   "indflytning": "61.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:34:45.008243+02:00",
+  "oprettet": "2026-09-02T13:34:45.008243+02:00",
+  "vej": "Store Kongensgade"
+ },
  "5371535": {
   "detaljer": {
    "aconto": "650 kr.",
