@@ -1,4 +1,4 @@
-// Boligjagt: en lille menulinje-app til macOS.
+// Boligjagt: et lille macOS-program med eget vindue og et ordmaerke i menulinjen.
 //
 // Den henter den samme side som telefonen viser, holder styr paa hvilke
 // boliger den har set foer, og giver en notifikation naar der kommer en ny.
@@ -6,6 +6,7 @@
 // saa appen behoever kun at laese resultatet.
 
 import AppKit
+import WebKit
 import UserNotifications
 
 let SIDE_URL = URL(string: "https://macyonthedancefloor.github.io/boligjagt-side/")!
@@ -51,7 +52,8 @@ struct Sidedata: Codable {
 
 // MARK: - App
 
-class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
+class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate,
+               WKNavigationDelegate, WKUIDelegate, NSWindowDelegate {
 
     var punkt: NSStatusItem!
     var ur: Timer?
@@ -60,7 +62,70 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     var sidsteFejl: String?
     var maaSendeBesked = false
 
+    var vindue: NSWindow?
+    var web: WKWebView?
+
+    // MARK: vindue
+
+    /// Aabner appens eget vindue. Siden vises inde i appen, ikke i Safari.
+    func visVindue(url: URL? = nil) {
+        if vindue == nil {
+            let opsaetning = WKWebViewConfiguration()
+            opsaetning.websiteDataStore = .default()   // saa localStorage huskes
+            let visning = WKWebView(frame: .zero, configuration: opsaetning)
+            visning.navigationDelegate = self
+            visning.uiDelegate = self
+            visning.allowsBackForwardNavigationGestures = true
+            web = visning
+
+            let v = NSWindow(
+                contentRect: NSRect(x: 0, y: 0, width: 760, height: 900),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable],
+                backing: .buffered, defer: false)
+            v.title = "Boligjagt"
+            v.contentView = visning
+            v.setFrameAutosaveName("BoligjagtVindue")   // husker stoerrelse og placering
+            v.minSize = NSSize(width: 420, height: 480)
+            v.delegate = self
+            v.isReleasedWhenClosed = false
+            vindue = v
+            visning.load(URLRequest(url: SIDE_URL))
+        }
+        if let url = url { web?.load(URLRequest(url: url)) }
+        vindue?.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    /// Klik paa ikonet i Dock naar vinduet er lukket skal aabne det igen.
+    func applicationShouldHandleReopen(_ app: NSApplication, hasVisibleWindows: Bool) -> Bool {
+        if !hasVisibleWindows { visVindue() }
+        return true
+    }
+
+    /// Links til selve annoncen aabnes i browseren, hvor hele udbyderens side
+    /// fungerer. Vores egen side bliver inde i appen.
+    func webView(_ web: WKWebView, decidePolicyFor handling: WKNavigationAction,
+                 decisionHandler svar: @escaping (WKNavigationActionPolicy) -> Void) {
+        if handling.navigationType == .linkActivated, let url = handling.request.url,
+           url.host != SIDE_URL.host {
+            NSWorkspace.shared.open(url)
+            svar(.cancel)
+            return
+        }
+        svar(.allow)
+    }
+
+    /// target="_blank" har ingen mening i et enkelt vindue: aabn i browseren.
+    func webView(_ web: WKWebView, createWebViewWith opsaetning: WKWebViewConfiguration,
+                 for handling: WKNavigationAction,
+                 windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if let url = handling.request.url { NSWorkspace.shared.open(url) }
+        return nil
+    }
+
     func applicationDidFinishLaunching(_ note: Notification) {
+        byggMenulinje()
+        visVindue()
         punkt = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let knap = punkt.button {
             knap.image = ordmaerke()
@@ -80,6 +145,64 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
             self.hent()
         }
     }
+
+    /// Menulinjen oeverst paa skaermen. Uden den virker hverken cmd-Q,
+    /// cmd-W eller cmd-R, og appen foeles ikke som et rigtigt program.
+    func byggMenulinje() {
+        let hoved = NSMenu()
+
+        let appPunkt = NSMenuItem()
+        hoved.addItem(appPunkt)
+        let appMenu = NSMenu()
+        appMenu.addItem(withTitle: "Om Boligjagt", action: #selector(omApp), keyEquivalent: "")
+            .target = self
+        appMenu.addItem(.separator())
+        appMenu.addItem(withTitle: "Skjul Boligjagt",
+                        action: #selector(NSApplication.hide(_:)), keyEquivalent: "h")
+        appMenu.addItem(.separator())
+        appMenu.addItem(withTitle: "Afslut Boligjagt",
+                        action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        appPunkt.submenu = appMenu
+
+        let visPunkt = NSMenuItem()
+        hoved.addItem(visPunkt)
+        let visMenu = NSMenu(title: "Vis")
+        visMenu.addItem(withTitle: "Tjek for nye boliger",
+                        action: #selector(tjekNu), keyEquivalent: "r").target = self
+        visMenu.addItem(withTitle: "Hent siden igen",
+                        action: #selector(genindlaes), keyEquivalent: "R").target = self
+        visMenu.addItem(.separator())
+        visMenu.addItem(withTitle: "Tilbage",
+                        action: #selector(tilbage), keyEquivalent: "[").target = self
+        visPunkt.submenu = visMenu
+
+        let vinduePunkt = NSMenuItem()
+        hoved.addItem(vinduePunkt)
+        let vindueMenu = NSMenu(title: "Vindue")
+        vindueMenu.addItem(withTitle: "Luk",
+                           action: #selector(NSWindow.performClose(_:)), keyEquivalent: "w")
+        vindueMenu.addItem(withTitle: "Minimer",
+                           action: #selector(NSWindow.performMiniaturize(_:)), keyEquivalent: "m")
+        vinduePunkt.submenu = vindueMenu
+        NSApp.windowsMenu = vindueMenu
+
+        NSApp.mainMenu = hoved
+    }
+
+    @objc func omApp() {
+        let tekst = "Boligjagt holder øje med ledige lejligheder på BoligPortal "
+                  + "og Homes and Housing, og skriver en henvendelse klar til dig.\n\n"
+                  + "Listen opdateres på GitHub cirka hvert kvarter, også når "
+                  + "din Mac er slukket."
+        NSApp.orderFrontStandardAboutPanel(options: [
+            .applicationName: "Boligjagt",
+            .credits: NSAttributedString(string: tekst),
+        ])
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    @objc func genindlaes() { web?.reload() }
+    @objc func tilbage() { web?.goBack() }
 
     /// Ordmaerket til menulinjen. Tegnes som skabelonbillede, saa macOS selv
     /// farver det sort eller hvidt efter lyst og moerkt tema.
@@ -202,9 +325,12 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive svar: UNNotificationResponse,
                                 withCompletionHandler faerdig: @escaping () -> Void) {
+        // Er det en enkelt bolig, aabner vi annoncen i browseren, hvor hele
+        // udbyderens side virker. Ellers viser vi vores egen liste i appen.
         if let tekst = svar.notification.request.content.userInfo["url"] as? String,
            let url = URL(string: tekst) {
-            NSWorkspace.shared.open(url)
+            if url.host == SIDE_URL.host { visVindue(url: url) }
+            else { NSWorkspace.shared.open(url) }
         }
         faerdig()
     }
@@ -280,7 +406,7 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
             NSWorkspace.shared.open(url)
         }
     }
-    @objc func aabnSiden() { NSWorkspace.shared.open(SIDE_URL) }
+    @objc func aabnSiden() { visVindue(url: SIDE_URL) }
     @objc func tjekNu() { hent() }
     @objc func afslut() { NSApp.terminate(nil) }
 }
@@ -288,5 +414,5 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
 let app = NSApplication.shared
 let styring = Styring()
 app.delegate = styring
-app.setActivationPolicy(.accessory)   // menulinje-app, ingen ikon i Dock
+app.setActivationPolicy(.regular)     // ikon i Dock og med i cmd-Tab
 app.run()

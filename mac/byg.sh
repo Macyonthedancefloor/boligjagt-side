@@ -16,7 +16,8 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 
 # --- Info.plist -------------------------------------------------------------
-# LSUIElement gør den til en ren menulinje-app uden ikon i Dock.
+# LSUIElement=false: appen har baade et vindue, et ikon i Dock og et
+# ordmaerke i menulinjen.
 cat > "$APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
@@ -31,7 +32,7 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundlePackageType</key>       <string>APPL</string>
   <key>CFBundleExecutable</key>        <string>Boligjagt</string>
   <key>LSMinimumSystemVersion</key>    <string>13.0</string>
-  <key>LSUIElement</key>               <true/>
+  <key>LSUIElement</key>               <false/>
   <key>CFBundleIconFile</key>          <string>AppIcon</string>
   <key>NSHumanReadableCopyright</key>  <string>Personligt vaerktoej</string>
 </dict>
