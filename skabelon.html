@@ -36,6 +36,13 @@
     line-height:1.55; padding:20px 16px 64px; -webkit-text-size-adjust:100%;
   }
   .wrap{max-width:640px;margin:0 auto;}
+  .traek{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:center;
+    height:0;overflow:hidden;
+    background:var(--patina);color:#FBFDFC;
+    font-size:13px;font-weight:600;letter-spacing:.02em;
+  }
   .head{display:flex;flex-direction:column;gap:10px;padding-bottom:20px;
         margin-bottom:20px;border-bottom:2px solid var(--ink);}
   h1{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0;
@@ -134,6 +141,7 @@
 </style>
 </head>
 <body>
+<div class="traek" id="traek"><span id="traek-tekst">Træk ned for at opdatere</span></div>
 <div class="wrap">
 
   <header class="head">
@@ -616,6 +624,54 @@
   }
 
   tegn();
+
+  // --- traek ned for at opdatere -------------------------------------
+  // Safari har det selv, men gestussen forsvinder naar siden ligger paa
+  // hjemmeskaermen som app. Derfor bygger vi den ind.
+  (function(){
+    var baand = document.getElementById("traek");
+    var tekst = document.getElementById("traek-tekst");
+    if (!baand || !("ontouchstart" in window)) return;
+
+    var GRAENSE = 70;      // hvor langt der skal traekkes
+    var LOFT = 110;        // hvor langt baandet maks foelger med
+    var start = null, traek = 0, laast = false;
+
+    function saet(h){
+      baand.style.height = h + "px";
+      baand.style.transition = h === 0 ? "height .2s ease" : "none";
+    }
+
+    document.addEventListener("touchstart", function(e){
+      // Kun naar vi allerede er helt oppe, ellers stjaeler vi almindelig scroll.
+      if (laast || window.scrollY > 0 || e.touches.length !== 1) { start = null; return; }
+      start = e.touches[0].clientY;
+      traek = 0;
+    }, { passive: true });
+
+    document.addEventListener("touchmove", function(e){
+      if (start === null || laast) return;
+      var afstand = e.touches[0].clientY - start;
+      if (afstand <= 0) { start = null; saet(0); return; }
+      // Modstand, saa det foeles som at traekke i noget.
+      traek = Math.min(LOFT, afstand * 0.5);
+      tekst.textContent = traek >= GRAENSE ? "Slip for at opdatere" : "Træk ned for at opdatere";
+      saet(traek);
+    }, { passive: true });
+
+    document.addEventListener("touchend", function(){
+      if (start === null || laast) return;
+      if (traek >= GRAENSE) {
+        laast = true;
+        tekst.textContent = "Opdaterer…";
+        saet(GRAENSE);
+        location.reload();
+      } else {
+        saet(0);
+      }
+      start = null;
+    }, { passive: true });
+  })();
 })();
 </script>
 </body>

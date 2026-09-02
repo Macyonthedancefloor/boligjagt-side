@@ -11,8 +11,8 @@
    "indflytning": "34.417 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T11:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T11:06:36.940834+02:00",
   "vej": "Australiensvej"
  },
  "4766812": {
@@ -27,41 +27,9 @@
    "indflytning": "61.000 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T13:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T14:06:36.940834+02:00",
   "vej": "Store Kongensgade"
- },
- "5371535": {
-  "detaljer": {
-   "aconto": "650 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "35.400 kr.",
-   "elevator": true,
-   "forudbetalt": "11.800 kr.",
-   "husdyr": false,
-   "indflytning": "59.650 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T14:53:00.885590+02:00",
-  "vej": "Bydammen"
- },
- "5445092": {
-  "detaljer": {
-   "aconto": "550 kr.",
-   "altan": false,
-   "delevenlig": false,
-   "depositum": "44.100 kr.",
-   "elevator": true,
-   "forudbetalt": "14.700 kr.",
-   "husdyr": true,
-   "indflytning": "74.050 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T16:53:00.885590+02:00",
-  "vej": "Gertrude Steins Vej"
  },
  "5518850": {
   "detaljer": {
@@ -75,9 +43,25 @@
    "indflytning": "59.550 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T15:21:13.034245+02:00",
-  "oprettet": "2026-09-02T15:21:13.034245+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T15:06:36.940834+02:00",
   "vej": "Grusgraven"
+ },
+ "5519908": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "35.100 kr.",
+   "elevator": true,
+   "forudbetalt": "11.700 kr.",
+   "husdyr": true,
+   "indflytning": "59.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
+  "vej": "Tingbjerg Ås"
  },
  "5530506": {
   "detaljer": {
@@ -91,25 +75,9 @@
    "indflytning": "30.000 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T08:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T09:06:36.940834+02:00",
   "vej": "Niels Finsens Alle"
- },
- "5601564": {
-  "detaljer": {
-   "aconto": "600 kr.",
-   "altan": false,
-   "delevenlig": false,
-   "depositum": "43.500 kr.",
-   "elevator": false,
-   "forudbetalt": "26.000 kr.",
-   "husdyr": false,
-   "indflytning": "84.600 kr.",
-   "moebleret": true
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T16:53:00.885590+02:00",
-  "vej": "Blegdamsvej"
  },
  "5665385": {
   "detaljer": {
@@ -123,41 +91,9 @@
    "indflytning": "21.100 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T10:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T11:06:36.940834+02:00",
   "vej": "Johan Wilmanns Vej"
- },
- "5666365": {
-  "detaljer": {
-   "aconto": "675 kr.",
-   "altan": false,
-   "delevenlig": false,
-   "depositum": "18.575,94 kr.",
-   "elevator": false,
-   "forudbetalt": "18.575,94 kr.",
-   "husdyr": false,
-   "indflytning": "44.018,86 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T14:53:00.885590+02:00",
-  "vej": "Østbrovej"
- },
- "5666403": {
-  "detaljer": {
-   "aconto": "850 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "41.400 kr.",
-   "elevator": true,
-   "forudbetalt": "13.800 kr.",
-   "husdyr": false,
-   "indflytning": "69.850 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T15:53:00.885590+02:00",
-  "vej": "C.F. Møllers Allé"
  },
  "5666430": {
   "detaljer": {
@@ -171,25 +107,9 @@
    "indflytning": "46.100 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T16:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-01T17:06:36.940834+02:00",
   "vej": "Gråbrødretorv"
- },
- "5666431": {
-  "detaljer": {
-   "aconto": "400 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "26.400 kr.",
-   "elevator": null,
-   "forudbetalt": "26.400 kr.",
-   "husdyr": false,
-   "indflytning": "62.000 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T16:53:00.885590+02:00",
-  "vej": "Sankt Nikolaj Vej"
  },
  "5666448": {
   "detaljer": {
@@ -203,8 +123,8 @@
    "indflytning": "32.000 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T10:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T10:06:36.940834+02:00",
   "vej": "Taastrup have"
  },
  "5666454": {
@@ -219,8 +139,8 @@
    "indflytning": "73.700 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T17:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-01T18:06:36.940834+02:00",
   "vej": "Skodsborg Strandvej"
  },
  "5666456": {
@@ -235,8 +155,8 @@
    "indflytning": "75.000 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T17:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-01T18:06:36.940834+02:00",
   "vej": "Rådmandsgade"
  },
  "5666466": {
@@ -251,8 +171,8 @@
    "indflytning": "57.700 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-01T17:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-01T18:06:36.940834+02:00",
   "vej": "Mekanikvej"
  },
  "5666600": {
@@ -267,8 +187,8 @@
    "indflytning": "20.000 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T09:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T10:06:36.940834+02:00",
   "vej": "Broholms Alle"
  },
  "5666758": {
@@ -283,8 +203,8 @@
    "indflytning": "73.000 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T13:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T14:06:36.940834+02:00",
   "vej": "Yderlandsvej"
  },
  "5666780": {
@@ -299,9 +219,57 @@
    "indflytning": "56.600 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-02T15:47:20.664540+02:00",
-  "oprettet": "2026-09-02T15:47:20.664540+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Christian X's Alle"
+ },
+ "5666864": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "35.700 kr.",
+   "elevator": true,
+   "forudbetalt": "11.900 kr.",
+   "husdyr": true,
+   "indflytning": "60.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
+  "vej": "Herlev Torv"
+ },
+ "5666866": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "34.800 kr.",
+   "elevator": true,
+   "forudbetalt": "11.600 kr.",
+   "husdyr": true,
+   "indflytning": "58.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
+  "vej": "Tingbjerg Ås"
+ },
+ "5666867": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": true,
+   "forudbetalt": "14.500 kr.",
+   "husdyr": true,
+   "indflytning": "73.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
+  "vej": "Svanevej"
  },
  "667997": {
   "detaljer": {
@@ -315,23 +283,23 @@
    "indflytning": "77.600 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T08:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T09:06:36.940834+02:00",
   "vej": "Kastanie Alle"
  },
  "hh-12171": {
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T14:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Vedbæk Stationsvej"
  },
  "hh-14291": {
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T14:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Ordrupvej"
  },
  "hh-8095": {
-  "foerst_set": "2026-09-02T14:53:00.885590+02:00",
-  "oprettet": "2026-09-02T14:53:00.885590+02:00",
+  "foerst_set": "2026-09-02T16:06:36.940834+02:00",
+  "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Ryesgade"
  }
 }
