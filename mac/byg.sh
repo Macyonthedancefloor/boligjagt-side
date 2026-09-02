@@ -32,10 +32,19 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
   <key>CFBundleExecutable</key>        <string>Boligjagt</string>
   <key>LSMinimumSystemVersion</key>    <string>13.0</string>
   <key>LSUIElement</key>               <true/>
+  <key>CFBundleIconFile</key>          <string>AppIcon</string>
   <key>NSHumanReadableCopyright</key>  <string>Personligt vaerktoej</string>
 </dict>
 </plist>
 PLIST
+
+# --- ikon -------------------------------------------------------------------
+# Tegnes fra bunden, saa der ikke ligger billedfiler i repoet.
+TMP="$(mktemp -d)"
+swiftc -O -framework AppKit -o "$TMP/lavikon" "$HER/lav-ikon.swift"
+"$TMP/lavikon" "$TMP/Boligjagt.iconset" > /dev/null
+iconutil -c icns "$TMP/Boligjagt.iconset" -o "$APP/Contents/Resources/AppIcon.icns"
+rm -rf "$TMP"
 
 # --- oversaettelse ----------------------------------------------------------
 swiftc -O \

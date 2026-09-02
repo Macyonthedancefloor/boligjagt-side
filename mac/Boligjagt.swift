@@ -63,7 +63,7 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     func applicationDidFinishLaunching(_ note: Notification) {
         punkt = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let knap = punkt.button {
-            knap.image = NSImage(systemSymbolName: "house", accessibilityDescription: "Boligjagt")
+            knap.image = ordmaerke()
             knap.imagePosition = .imageLeading
         }
         punkt.menu = NSMenu()
@@ -79,6 +79,27 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
         ur = Timer.scheduledTimer(withTimeInterval: TJEK_INTERVAL, repeats: true) { _ in
             self.hent()
         }
+    }
+
+    /// Ordmaerket til menulinjen. Tegnes som skabelonbillede, saa macOS selv
+    /// farver det sort eller hvidt efter lyst og moerkt tema.
+    func ordmaerke() -> NSImage {
+        let ord = "BJAGT" as NSString
+        let skrift = NSFont.systemFont(ofSize: 11, weight: .heavy)
+        let egenskaber: [NSAttributedString.Key: Any] = [
+            .font: skrift,
+            .foregroundColor: NSColor.black,
+            .kern: 0.4,
+        ]
+        let str = ord.size(withAttributes: egenskaber)
+        let hoejde: CGFloat = 16
+        let billede = NSImage(size: NSSize(width: ceil(str.width) + 2, height: hoejde))
+        billede.lockFocus()
+        ord.draw(at: NSPoint(x: 1, y: (hoejde - str.height) / 2),
+                 withAttributes: egenskaber)
+        billede.unlockFocus()
+        billede.isTemplate = true
+        return billede
     }
 
     // MARK: hentning
