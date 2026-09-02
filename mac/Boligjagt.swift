@@ -487,8 +487,18 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     // MARK: notifikation
 
     func givBesked(om nye: [Bolig]) {
-        guard maaSendeBesked else { return }
+        // Vi spoerger om lov paa selve afsendelsestidspunktet i stedet for at
+        // stole paa et flag sat ved opstart. Svaret paa tilladelsen kommer
+        // asynkront, og var hentningen hurtigere end svaret, blev beskeden
+        // ellers tavst droppet.
+        UNUserNotificationCenter.current().getNotificationSettings { indstilling in
+            guard indstilling.authorizationStatus == .authorized
+                || indstilling.authorizationStatus == .provisional else { return }
+            DispatchQueue.main.async { self.sendBesked(om: nye) }
+        }
+    }
 
+    func sendBesked(om nye: [Bolig]) {
         let indhold = UNMutableNotificationContent()
         if nye.count == 1, let b = nye[0] as Bolig? {
             indhold.title = "Ny bolig: \(b.overskrift)"
