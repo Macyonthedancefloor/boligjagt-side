@@ -39,6 +39,11 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 </plist>
 PLIST
 
+# --- hentescript ------------------------------------------------------------
+# Appen kan skanne selv ved at koere det SAMME script som GitHub bruger.
+# Derfor ligger logikken kun eet sted og kan ikke komme ud af trit.
+cp "$HER/../hent.py" "$HER/../skabelon.html" "$APP/Contents/Resources/"
+
 # --- ikon -------------------------------------------------------------------
 # Tegnes fra bunden, saa der ikke ligger billedfiler i repoet.
 TMP="$(mktemp -d)"

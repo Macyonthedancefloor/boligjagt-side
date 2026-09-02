@@ -66,7 +66,10 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     var vindue: NSWindow?
     var web: WKWebView?
     var opdaterKnap: NSButton?
+    var skanKnap: NSButton?
     var statusFelt: NSTextField?
+    var skanner = false
+    var viserEgenSkanning = false
 
     // MARK: vindue
 
@@ -113,7 +116,14 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
     @objc func opdaterAlt() {
         opdaterKnap?.isEnabled = false
         statusFelt?.stringValue = "Henter…"
-        web?.reload()
+        // Ser vi paa vores egen skanning, foerer Opdater tilbage til den
+        // udgivne side, saa man altid kan komme hjem igen.
+        if viserEgenSkanning {
+            viserEgenSkanning = false
+            web?.load(URLRequest(url: SIDE_URL))
+        } else {
+            web?.reload()
+        }
         hent()
         // Knappen laases kort, saa et utaalmodigt dobbeltklik ikke sender
         // tre hentninger afsted paa en gang.
@@ -122,8 +132,110 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
         }
     }
 
+    // MARK: skan selv
+
+    /// Mappen hvor appen koerer sin egen skanning. Vi laegger den under
+    /// Application Support, saa appen i Programmer ikke skriver i sig selv.
+    var arbejdsmappe: URL {
+        let stoette = FileManager.default.urls(for: .applicationSupportDirectory,
+                                               in: .userDomainMask)[0]
+        return stoette.appendingPathComponent("Boligjagt", isDirectory: true)
+    }
+
+    /// Koerer hent.py fra appens egne filer. Det er nøjagtig samme script som
+    /// GitHub bruger, saa resultatet er det samme, bare hentet lige nu.
+    @objc func skanNu() {
+        guard skanner == false else { return }
+        guard let res = Bundle.main.resourceURL else { return }
+
+        let python = ["/usr/bin/python3", "/usr/local/bin/python3", "/opt/homebrew/bin/python3"]
+            .first { FileManager.default.isExecutableFile(atPath: $0) }
+        guard let python = python else {
+            visFejl("Python mangler",
+                    "Appen skanner ved at koere det samme script som GitHub. "
+                  + "Det kraever python3, som foelger med Apples Command Line Tools.\n\n"
+                  + "Installer dem i Terminal med:  xcode-select --install")
+            return
+        }
+
+        skanner = true
+        skanKnap?.isEnabled = false
+        statusFelt?.stringValue = "Skanner boligsiderne… kan tage et minut"
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            let fm = FileManager.default
+            do {
+                try fm.createDirectory(at: self.arbejdsmappe,
+                                       withIntermediateDirectories: true)
+                // Scriptet og skabelonen kopieres ud hver gang, saa en ny
+                // udgave af appen ogsaa giver en ny udgave af skanningen.
+                for navn in ["hent.py", "skabelon.html"] {
+                    let maal = self.arbejdsmappe.appendingPathComponent(navn)
+                    if fm.fileExists(atPath: maal.path) { try fm.removeItem(at: maal) }
+                    try fm.copyItem(at: res.appendingPathComponent(navn), to: maal)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.skanFaerdig(fejl: "Kunne ikke klargøre mappen: \(error.localizedDescription)")
+                }
+                return
+            }
+
+            let opgave = Process()
+            opgave.executableURL = URL(fileURLWithPath: python)
+            opgave.arguments = ["hent.py"]
+            opgave.currentDirectoryURL = self.arbejdsmappe
+            let roer = Pipe()
+            opgave.standardError = roer
+            opgave.standardOutput = Pipe()
+
+            do { try opgave.run() } catch {
+                DispatchQueue.main.async {
+                    self.skanFaerdig(fejl: "Kunne ikke starte scriptet: \(error.localizedDescription)")
+                }
+                return
+            }
+            let fejltekst = String(data: roer.fileHandleForReading.readDataToEndOfFile(),
+                                   encoding: .utf8) ?? ""
+            opgave.waitUntilExit()
+
+            DispatchQueue.main.async {
+                if opgave.terminationStatus != 0 {
+                    let kort = fejltekst.split(separator: "\n").last.map(String.init) ?? "ukendt fejl"
+                    self.skanFaerdig(fejl: kort)
+                } else {
+                    self.skanFaerdig(fejl: nil)
+                }
+            }
+        }
+    }
+
+    func skanFaerdig(fejl: String?) {
+        skanner = false
+        skanKnap?.isEnabled = true
+        if let fejl = fejl {
+            statusFelt?.stringValue = "Skanning mislykkedes"
+            visFejl("Skanningen gik galt", fejl)
+            return
+        }
+        let side = arbejdsmappe.appendingPathComponent("index.html")
+        // WKWebView skal have lov at laese mappen for at finde sine egne filer.
+        web?.loadFileURL(side, allowingReadAccessTo: arbejdsmappe)
+        viserEgenSkanning = true
+        hent()   // opdater ogsaa tallet i menulinjen
+    }
+
+    func visFejl(_ titel: String, _ tekst: String) {
+        let boks = NSAlert()
+        boks.messageText = titel
+        boks.informativeText = tekst
+        boks.alertStyle = .warning
+        boks.addButton(withTitle: "OK")
+        if let v = vindue { boks.beginSheetModal(for: v) } else { boks.runModal() }
+    }
+
     func toolbarDefaultItemIdentifiers(_ t: NSToolbar) -> [NSToolbarItem.Identifier] {
-        [.init("opdater"), .flexibleSpace, .init("status")]
+        [.init("opdater"), .init("skan"), .flexibleSpace, .init("status")]
     }
     func toolbarAllowedItemIdentifiers(_ t: NSToolbar) -> [NSToolbarItem.Identifier] {
         toolbarDefaultItemIdentifiers(t)
@@ -141,6 +253,17 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
                                 target: self, action: #selector(opdaterAlt))
             knap.bezelStyle = .texturedRounded
             opdaterKnap = knap
+            punkt.view = knap
+            return punkt
+        case "skan":
+            let punkt = NSToolbarItem(itemIdentifier: id)
+            punkt.label = "Skan nu"
+            punkt.toolTip = "Gaa selv ud og hent friske annoncer (⇧⌘S). Tager op til et minut."
+            let knap = NSButton(image: NSImage(systemSymbolName: "magnifyingglass",
+                                               accessibilityDescription: "Skan nu")!,
+                                target: self, action: #selector(skanNu))
+            knap.bezelStyle = .texturedRounded
+            skanKnap = knap
             punkt.view = knap
             return punkt
         case "status":
@@ -230,6 +353,8 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
         let visMenu = NSMenu(title: "Vis")
         visMenu.addItem(withTitle: "Opdater listen",
                         action: #selector(opdaterAlt), keyEquivalent: "r").target = self
+        visMenu.addItem(withTitle: "Skan boligsiderne nu",
+                        action: #selector(skanNu), keyEquivalent: "S").target = self
         visMenu.addItem(withTitle: "Hent siden igen",
                         action: #selector(genindlaes), keyEquivalent: "R").target = self
         visMenu.addItem(.separator())
