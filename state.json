@@ -63,6 +63,22 @@
   "oprettet": "2026-09-01T16:53:00.885590+02:00",
   "vej": "Gertrude Steins Vej"
  },
+ "5518850": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.250 kr.",
+   "elevator": true,
+   "forudbetalt": "11.750 kr.",
+   "husdyr": true,
+   "indflytning": "59.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-02T15:21:13.034245+02:00",
+  "oprettet": "2026-09-02T15:21:13.034245+02:00",
+  "vej": "Grusgraven"
+ },
  "5530506": {
   "detaljer": {
    "aconto": "0 kr.",
