@@ -53,7 +53,8 @@ struct Sidedata: Codable {
 // MARK: - App
 
 class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate,
-               WKNavigationDelegate, WKUIDelegate, NSWindowDelegate {
+               WKNavigationDelegate, WKUIDelegate, NSWindowDelegate,
+               NSToolbarDelegate {
 
     var punkt: NSStatusItem!
     var ur: Timer?
@@ -64,6 +65,8 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
 
     var vindue: NSWindow?
     var web: WKWebView?
+    var opdaterKnap: NSButton?
+    var statusFelt: NSTextField?
 
     // MARK: vindue
 
@@ -88,12 +91,70 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
             v.minSize = NSSize(width: 420, height: 480)
             v.delegate = self
             v.isReleasedWhenClosed = false
+
+            let vaerktoej = NSToolbar(identifier: "BoligjagtVaerktoej")
+            vaerktoej.delegate = self
+            vaerktoej.displayMode = .iconAndLabel
+            v.toolbar = vaerktoej
+            v.toolbarStyle = .unified
+
             vindue = v
             visning.load(URLRequest(url: SIDE_URL))
         }
         if let url = url { web?.load(URLRequest(url: url)) }
         vindue?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    // MARK: vaerktoejslinje
+
+    /// Opdaterer: henter siden igen OG laeser boligerne ind paa ny, saa baade
+    /// vinduet og tallet i menulinjen foelger med.
+    @objc func opdaterAlt() {
+        opdaterKnap?.isEnabled = false
+        statusFelt?.stringValue = "Henter…"
+        web?.reload()
+        hent()
+        // Knappen laases kort, saa et utaalmodigt dobbeltklik ikke sender
+        // tre hentninger afsted paa en gang.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.opdaterKnap?.isEnabled = true
+        }
+    }
+
+    func toolbarDefaultItemIdentifiers(_ t: NSToolbar) -> [NSToolbarItem.Identifier] {
+        [.init("opdater"), .flexibleSpace, .init("status")]
+    }
+    func toolbarAllowedItemIdentifiers(_ t: NSToolbar) -> [NSToolbarItem.Identifier] {
+        toolbarDefaultItemIdentifiers(t)
+    }
+
+    func toolbar(_ t: NSToolbar, itemForItemIdentifier id: NSToolbarItem.Identifier,
+                 willBeInsertedIntoToolbar: Bool) -> NSToolbarItem? {
+        switch id.rawValue {
+        case "opdater":
+            let punkt = NSToolbarItem(itemIdentifier: id)
+            punkt.label = "Opdater"
+            punkt.toolTip = "Hent listen igen (⌘R)"
+            let knap = NSButton(image: NSImage(systemSymbolName: "arrow.clockwise",
+                                               accessibilityDescription: "Opdater")!,
+                                target: self, action: #selector(opdaterAlt))
+            knap.bezelStyle = .texturedRounded
+            opdaterKnap = knap
+            punkt.view = knap
+            return punkt
+        case "status":
+            let punkt = NSToolbarItem(itemIdentifier: id)
+            let felt = NSTextField(labelWithString: sidstOpdateret)
+            felt.font = .systemFont(ofSize: 11)
+            felt.textColor = .secondaryLabelColor
+            felt.alignment = .right
+            statusFelt = felt
+            punkt.view = felt
+            return punkt
+        default:
+            return nil
+        }
     }
 
     /// Klik paa ikonet i Dock naar vinduet er lukket skal aabne det igen.
@@ -167,8 +228,8 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
         let visPunkt = NSMenuItem()
         hoved.addItem(visPunkt)
         let visMenu = NSMenu(title: "Vis")
-        visMenu.addItem(withTitle: "Tjek for nye boliger",
-                        action: #selector(tjekNu), keyEquivalent: "r").target = self
+        visMenu.addItem(withTitle: "Opdater listen",
+                        action: #selector(opdaterAlt), keyEquivalent: "r").target = self
         visMenu.addItem(withTitle: "Hent siden igen",
                         action: #selector(genindlaes), keyEquivalent: "R").target = self
         visMenu.addItem(.separator())
@@ -237,6 +298,7 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
             if let fejl = fejl {
                 DispatchQueue.main.async {
                     self.sidsteFejl = fejl.localizedDescription
+                    self.statusFelt?.stringValue = "Kunne ikke hente"
                     self.tegnMenu()
                 }
                 return
@@ -287,6 +349,7 @@ class Styring: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate
         let nye = side.boliger.filter { !sete.contains($0.id) }
 
         boliger = side.boliger
+        statusFelt?.stringValue = "Opdateret \(side.opdateret)"
         UserDefaults.standard.set(Array(sete.union(side.boliger.map { $0.id })),
                                   forKey: HUSKE_NOEGLE)
         tegnMenu()
