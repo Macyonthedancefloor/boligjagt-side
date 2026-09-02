@@ -287,6 +287,22 @@
   "oprettet": "2026-09-02T13:53:00.885590+02:00",
   "vej": "Yderlandsvej"
  },
+ "5666780": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "28.000 kr.",
+   "elevator": false,
+   "forudbetalt": "14.000 kr.",
+   "husdyr": false,
+   "indflytning": "56.600 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-02T15:47:20.664540+02:00",
+  "oprettet": "2026-09-02T15:47:20.664540+02:00",
+  "vej": "Christian X's Alle"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
