@@ -22,7 +22,7 @@ from datetime import datetime, timedelta, timezone
 
 SOEGE_URL = (
     "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/2-v%C3%A6relser/"
-    "?max_monthly_rent=12000"
+    "?max_monthly_rent=15000"
 )
 
 # Homes and Housing er et udlejningsbureau i den dyrere ende. De har et rent
@@ -30,7 +30,7 @@ SOEGE_URL = (
 # Bemaerk: mange af deres billigste boliger er forbeholdt expats. Vi sorterer
 # dem ikke fra, men markerer dem tydeligt, saa valget er brugerens eget.
 HH_API = "https://homesandhousing.dk/Umbraco/Api/Ajax/getAppartments"
-HH_MAX_LEJE = 13000
+HH_MAX_LEJE = 15000
 
 # Alt efter denne overskrift er BoligPortals egne anbefalinger fra andre
 # omraader, fx Hoersholm og Birkeroed. De skal IKKE med.
@@ -183,6 +183,8 @@ def hent_homesandhousing():
                 "husleje": f"{bolig.get('monthlyRent')} kr.",
                 "stoerrelse": (bolig.get("squarefeet") or "") + " m²"
                               if bolig.get("squarefeet") else None,
+                "aconto": (str(bolig.get("aCForbrug")) + " kr.")
+                          if bolig.get("aCForbrug") else None,
                 "billede": ("https://homesandhousing.dk"
                             + (bolig.get("galleri") or "").split(";")[0])
                            if (bolig.get("galleri") or "").strip() else None,
@@ -195,6 +197,36 @@ def hent_homesandhousing():
             break
     return fundne
 
+
+
+
+# ------------------------------------------------- detaljer pr. annonce
+
+def _tal_efter(tekst, maerke):
+    """Finder beloebet lige efter et maerkat, fx 'Aconto 700 kr.'"""
+    m = re.search(re.escape(maerke) + r"\s*([\d.]+(?:,\d+)?)\s*kr", tekst, re.I)
+    return (m.group(1) + " kr.") if m else None
+
+
+def hent_detaljer(url):
+    """
+    Aconto og depositum staar kun paa annoncens egen side, ikke i soegningen.
+    Siden er stor, saa den hentes kun een gang pr. annonce og gemmes derefter
+    i state.json. Fejler den, faar vi bare ingen detaljer for den bolig.
+    """
+    try:
+        raa = hent_side(url)
+    except Exception:
+        return {}
+    uden = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raa, flags=re.S | re.I)
+    uden = re.sub(r"<[^>]+>", " ", uden)
+    tekst = re.sub(r"\s+", " ", html.unescape(uden))
+    return {
+        "aconto": _tal_efter(tekst, "Aconto"),
+        "depositum": _tal_efter(tekst, "Depositum"),
+        "forudbetalt": _tal_efter(tekst, "Forudbetalt husleje"),
+        "indflytning": _tal_efter(tekst, "Indflytningspris"),
+    }
 
 # --------------------------------------------------------------------- alder
 
@@ -295,7 +327,12 @@ def byg_side(annoncer, nye_ider, nu):
             "ny": a["id"] in nye_ider,
             "expat": bool(a.get("kun_expats")),
             "advarsel": bool(a.get("advarsel")),
-            "indflytning": a.get("indflytningspris") or "",
+            "aconto": a.get("aconto") or "",
+            "depositum": a.get("depositum") or "",
+            "forudbetalt": a.get("forudbetalt") or "",
+            "indflytning": a.get("indflytning") or a.get("indflytningspris") or "",
+            "lejetal": _tal(a.get("husleje")),
+            "acontotal": _tal(a.get("aconto")),
             "ledig": a.get("ledig_fra") or "",
         })
 
@@ -355,6 +392,17 @@ def main():
                 oprettet = datetime.fromisoformat(gemt["oprettet"])
             except (KeyError, ValueError):
                 oprettet = nu
+
+        # Detaljer hentes een gang pr. annonce og genbruges derefter.
+        # Homes and Housing leverer dem allerede i deres api.
+        if a.get("kilde") == "BoligPortal":
+            gemte = (gemt or {}).get("detaljer") if gemt else None
+            if gemte is None:
+                gemte = hent_detaljer(a["url"])
+                state[a["id"]]["detaljer"] = gemte
+            else:
+                state[a["id"]]["detaljer"] = gemte
+            a.update({k: v for k, v in gemte.items() if v})
 
         a["oprettet"] = oprettet
         # Kilder uden opslagsdato (Homes and Housing) maa noejes med hvornaar

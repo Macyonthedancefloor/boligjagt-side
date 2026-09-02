@@ -67,6 +67,16 @@
     outline:none;border-color:var(--patina);box-shadow:0 0 0 3px var(--patina-wash);}
   .gemt{font-size:13px;color:var(--patina-strong);font-weight:600;min-height:18px;}
 
+  /* filter */
+  .filter{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;
+          padding:14px 16px;margin-bottom:22px;display:flex;flex-direction:column;gap:11px;}
+  .filter-raekke{display:flex;gap:12px;}
+  .filter-raekke .felt{flex:1;}
+  .afkryds{display:flex;align-items:center;gap:9px;cursor:pointer;font-size:14px;
+           min-height:32px;}
+  .afkryds input{width:18px;height:18px;accent-color:var(--patina);flex:none;}
+  .filter-svar{font-size:13px;color:var(--muted);font-weight:600;min-height:18px;}
+
   /* kort */
   .list{display:flex;flex-direction:column;gap:16px;}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
@@ -84,12 +94,13 @@
   .addr{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;
         line-height:1.15;margin:0 0 2px;}
   .area{color:var(--muted);font-size:14px;margin:0 0 12px;}
-  .facts{display:flex;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;}
-  .fact{flex:1;padding:10px 4px 2px;}
+  .facts{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  .fact{flex:1 1 45%;min-width:0;padding:10px 4px 2px;}
   .fact + .fact{border-left:1px solid var(--line);padding-left:12px;}
   .fact .k{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
            color:var(--muted);font-weight:600;}
   .fact .v{font-size:16px;font-weight:600;}
+  .udgift{margin:11px 0 0;font-size:13px;color:var(--muted);line-height:1.45;}
   .obs{margin:12px 0 0;padding:9px 11px;border-radius:8px;font-size:13px;line-height:1.45;
        background:var(--brick-wash);color:var(--brick);}
   .obs b{font-weight:700;}
@@ -150,6 +161,28 @@
     </div>
   </details>
 
+  <div class="filter">
+    <div class="filter-raekke">
+      <div class="felt">
+        <label for="f-min">Mindst</label>
+        <input id="f-min" type="number" inputmode="numeric" step="500" placeholder="0">
+      </div>
+      <div class="felt">
+        <label for="f-max">Højst</label>
+        <input id="f-max" type="number" inputmode="numeric" step="500" placeholder="ingen grænse">
+      </div>
+    </div>
+    <label class="afkryds">
+      <input id="f-aconto" type="checkbox">
+      <span>Regn aconto med i beløbet</span>
+    </label>
+    <label class="afkryds">
+      <input id="f-expat" type="checkbox">
+      <span>Skjul boliger kun for expats</span>
+    </label>
+    <div class="filter-svar" id="filter-svar"></div>
+  </div>
+
   <div class="list" id="list"></div>
 
   <div class="note">
@@ -165,7 +198,7 @@
 (function(){
   "use strict";
 
-  var DATA = {"opdateret": "2. sep. 2026 kl. 13.22", "antal": 20, "nye": 0, "boliger": [{"id": "4441361", "billede": "https://image-lambda.boligportal.dk/b1c4a0f1dc2905ff5220c78e5035c318?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Australiensvej", "omraade": "København Ø", "husleje": "11.917 kr.", "stoerrelse": "57 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-4441361", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665385", "billede": "https://image-lambda.boligportal.dk/b2f889e38bd11d8fe969613c1709085d?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Johan Wilmanns Vej", "omraade": "Kongens Lyngby", "husleje": "6.800 kr.", "stoerrelse": "57 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-5665385", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666448", "billede": "https://image-lambda.boligportal.dk/f8eface9dbed1788f50409cd477496f7?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Taastrup have", "omraade": "Taastrup", "husleje": "8.000 kr.", "stoerrelse": "60 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/60m2-2-vaer-id-5666448", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666600", "billede": "https://image-lambda.boligportal.dk/c3db0077a0ab64910423b10a5540522e?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Broholms Alle", "omraade": "Charlottenlund", "husleje": "7.500 kr.", "stoerrelse": "61 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5666600", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "hh-8095", "billede": "https://homesandhousing.dk/media/7160/ryesgade_lejlighed_leje_udlejning_1.jpg", "vej": "Ryesgade", "omraade": "København", "husleje": "12.500 kr.", "stoerrelse": "51 m²", "alder": "set 2 timer siden", "url": "https://homesandhousing.dk/lejlighed/ryesgade-112b-3-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "50.750", "ledig": "01-10-2026"}, {"id": "hh-12171", "billede": "https://homesandhousing.dk/media/12571/vedbaek_stationsvej_13b_1sal_vedbaek_lejlighed_leje_udlejning_apartment_rental_rent_lease_copenhagen_6.jpg", "vej": "Vedbæk Stationsvej", "omraade": "Vedbæk", "husleje": "12.500 kr.", "stoerrelse": "72 m²", "alder": "set 2 timer siden", "url": "https://homesandhousing.dk/lejlighed/vedbaek-stationsvej-13b-1-sal", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "51.000", "ledig": "01-11-2026"}, {"id": "hh-14291", "billede": "https://homesandhousing.dk/media/12634/ordrupvej_161_1tv_lejlighed_leje_udlejning_expats_housing_relocation_apartment_rental_rent_lease_copenhagen_10.jpg", "vej": "Ordrupvej", "omraade": "Charlottenlund", "husleje": "9.150 kr.", "stoerrelse": "71 m²", "alder": "set 2 timer siden", "url": "https://homesandhousing.dk/lejlighed/ordrupvej-161-1-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "indflytning": "64.950", "ledig": "01-09-2026"}, {"id": "5530506", "billede": "https://image-lambda.boligportal.dk/184f00b79032ee708140af16aff3f0e3?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Niels Finsens Alle", "omraade": "Søborg", "husleje": "6.000 kr.", "stoerrelse": "51 m²", "alder": "3 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/51m2-2-vaer-id-5530506", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "667997", "billede": "/static/images/no-image.jpg", "vej": "Kastanie Alle", "omraade": "Dragør", "husleje": "11.000 kr.", "stoerrelse": "78 m²", "alder": "4 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/78m2-2-vaer-id-667997", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666466", "billede": "https://image-lambda.boligportal.dk/c69cafe4657dd4cc58f01085dec82491?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Mekanikvej", "omraade": "Brøndby", "husleje": "11.400 kr.", "stoerrelse": "59 m²", "alder": "18 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/59m2-2-vaer-id-5666466", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666431", "billede": "https://image-lambda.boligportal.dk/c07df5f9f7d3cfdc423b9c9686d49c51?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Sankt Nikolaj Vej", "omraade": "Frederiksberg C", "husleje": "8.800 kr.", "stoerrelse": "54 m²", "alder": "20 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666431", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666365", "billede": "https://image-lambda.boligportal.dk/07a05dcd3aa77d46e8d9988b1d31d7aa?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Østbrovej", "omraade": "Glostrup", "husleje": "6.191,98 kr.", "stoerrelse": "54 m²", "alder": "22 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666365", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5371535", "billede": "https://image-lambda.boligportal.dk/3abcd97b7107be46c798c1445d616e7e?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Bydammen", "omraade": "Ballerup", "husleje": "11.800 kr.", "stoerrelse": "78 m²", "alder": "23 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/78m2-2-vaer-id-5371535", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666230", "billede": "https://image-lambda.boligportal.dk/24f36dd761e3820bd8c85e7411925851?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Filmbyen", "omraade": "Hvidovre", "husleje": "10.850 kr.", "stoerrelse": "66 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/66m2-2-vaer-id-5666230", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5350475", "billede": "https://image-lambda.boligportal.dk/45ef2bf1f1f9efab2bdb186e7cd6c899?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Ericavej", "omraade": "Gentofte", "husleje": "9.000 kr.", "stoerrelse": "61 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5350475", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5666033", "billede": "https://image-lambda.boligportal.dk/3c22e27a533953cbeffacca976a4f180?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Rådvadsvej", "omraade": "København NV", "husleje": "12.000 kr.", "stoerrelse": "55 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/55m2-2-vaer-id-5666033", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5646502", "billede": "https://image-lambda.boligportal.dk/41a5b15103489bb5508069423055e2dc?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Grankoglen", "omraade": "Glostrup", "husleje": "11.900 kr.", "stoerrelse": "61 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5646502", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665972", "billede": "https://image-lambda.boligportal.dk/4d7733471e73fa0188518d129c33d296?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Baneleddet", "omraade": "Brøndby", "husleje": "11.995 kr.", "stoerrelse": "60 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/60m2-2-vaer-id-5665972", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665927", "billede": "https://image-lambda.boligportal.dk/f98e54735ae5b067f60bc416f7cb53ca?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Virkelund Allé", "omraade": "Albertslund", "husleje": "11.950 kr.", "stoerrelse": "71 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/71m2-2-vaer-id-5665927", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}, {"id": "5665922", "billede": "https://image-lambda.boligportal.dk/f36e84fd74456b0fe58d0a77978b8545?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Kingosgade", "omraade": "Frederiksberg C", "husleje": "12.000 kr.", "stoerrelse": "57 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-5665922", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "indflytning": "", "ledig": ""}]};
+  var DATA = {"opdateret": "2. sep. 2026 kl. 13.32", "antal": 21, "nye": 0, "boliger": [{"id": "5666758", "billede": "https://image-lambda.boligportal.dk/e93a2ebedbb10a4a68ea1e8d0282965a?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Yderlandsvej", "omraade": "København S", "husleje": "14.500 kr.", "stoerrelse": "55 m²", "alder": "4 minutter siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/55m2-2-vaer-id-5666758", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "500 kr.", "depositum": "43.500 kr.", "forudbetalt": "14.500 kr.", "indflytning": "73.000 kr.", "lejetal": 14500, "acontotal": 500, "ledig": ""}, {"id": "hh-8095", "billede": "https://homesandhousing.dk/media/7160/ryesgade_lejlighed_leje_udlejning_1.jpg", "vej": "Ryesgade", "omraade": "København", "husleje": "12.500 kr.", "stoerrelse": "51 m²", "alder": "set 4 minutter siden", "url": "https://homesandhousing.dk/lejlighed/ryesgade-112b-3-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "aconto": "750 kr.", "depositum": "", "forudbetalt": "", "indflytning": "50.750", "lejetal": 12500, "acontotal": 750, "ledig": "01-10-2026"}, {"id": "hh-12171", "billede": "https://homesandhousing.dk/media/12571/vedbaek_stationsvej_13b_1sal_vedbaek_lejlighed_leje_udlejning_apartment_rental_rent_lease_copenhagen_6.jpg", "vej": "Vedbæk Stationsvej", "omraade": "Vedbæk", "husleje": "12.500 kr.", "stoerrelse": "72 m²", "alder": "set 4 minutter siden", "url": "https://homesandhousing.dk/lejlighed/vedbaek-stationsvej-13b-1-sal", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "aconto": "1.000 kr.", "depositum": "", "forudbetalt": "", "indflytning": "51.000", "lejetal": 12500, "acontotal": 1000, "ledig": "01-11-2026"}, {"id": "hh-14291", "billede": "https://homesandhousing.dk/media/12634/ordrupvej_161_1tv_lejlighed_leje_udlejning_expats_housing_relocation_apartment_rental_rent_lease_copenhagen_10.jpg", "vej": "Ordrupvej", "omraade": "Charlottenlund", "husleje": "9.150 kr.", "stoerrelse": "71 m²", "alder": "set 4 minutter siden", "url": "https://homesandhousing.dk/lejlighed/ordrupvej-161-1-tv", "kilde": "Homes and Housing", "ny": false, "expat": true, "advarsel": false, "aconto": "900 kr.", "depositum": "", "forudbetalt": "", "indflytning": "64.950", "lejetal": 9150, "acontotal": 900, "ledig": "01-09-2026"}, {"id": "4441361", "billede": "https://image-lambda.boligportal.dk/b1c4a0f1dc2905ff5220c78e5035c318?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Australiensvej", "omraade": "København Ø", "husleje": "11.917 kr.", "stoerrelse": "57 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-4441361", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "2.500 kr.", "depositum": "20.000 kr.", "forudbetalt": "0 kr.", "indflytning": "34.417 kr.", "lejetal": 11917, "acontotal": 2500, "ledig": ""}, {"id": "5665385", "billede": "https://image-lambda.boligportal.dk/b2f889e38bd11d8fe969613c1709085d?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Johan Wilmanns Vej", "omraade": "Kongens Lyngby", "husleje": "6.800 kr.", "stoerrelse": "57 m²", "alder": "2 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-5665385", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "700 kr.", "depositum": "6.800 kr.", "forudbetalt": "6.800 kr.", "indflytning": "21.100 kr.", "lejetal": 6800, "acontotal": 700, "ledig": ""}, {"id": "5666448", "billede": "https://image-lambda.boligportal.dk/f8eface9dbed1788f50409cd477496f7?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Taastrup have", "omraade": "Taastrup", "husleje": "8.000 kr.", "stoerrelse": "60 m²", "alder": "3 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/60m2-2-vaer-id-5666448", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "0 kr.", "depositum": "24.000 kr.", "forudbetalt": "0 kr.", "indflytning": "32.000 kr.", "lejetal": 8000, "acontotal": 0, "ledig": ""}, {"id": "5666600", "billede": "https://image-lambda.boligportal.dk/c3db0077a0ab64910423b10a5540522e?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Broholms Alle", "omraade": "Charlottenlund", "husleje": "7.500 kr.", "stoerrelse": "61 m²", "alder": "3 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/61m2-2-vaer-id-5666600", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "0 kr.", "depositum": "5.000 kr.", "forudbetalt": "7.500 kr.", "indflytning": "20.000 kr.", "lejetal": 7500, "acontotal": 0, "ledig": ""}, {"id": "667997", "billede": "/static/images/no-image.jpg", "vej": "Kastanie Alle", "omraade": "Dragør", "husleje": "11.000 kr.", "stoerrelse": "78 m²", "alder": "4 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/78m2-2-vaer-id-667997", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "600 kr.", "depositum": "33.000 kr.", "forudbetalt": "33.000 kr.", "indflytning": "77.600 kr.", "lejetal": 11000, "acontotal": 600, "ledig": ""}, {"id": "5530506", "billede": "https://image-lambda.boligportal.dk/184f00b79032ee708140af16aff3f0e3?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Niels Finsens Alle", "omraade": "Søborg", "husleje": "6.000 kr.", "stoerrelse": "51 m²", "alder": "4 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/51m2-2-vaer-id-5530506", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "0 kr.", "depositum": "18.000 kr.", "forudbetalt": "6.000 kr.", "indflytning": "30.000 kr.", "lejetal": 6000, "acontotal": 0, "ledig": ""}, {"id": "5666456", "billede": "https://image-lambda.boligportal.dk/ebc7fe116990cbf3c73c64b33f1c77b7?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Rådmandsgade", "omraade": "København N", "husleje": "14.900 kr.", "stoerrelse": "39 m²", "alder": "19 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/39m2-2-vaer-id-5666456", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "500 kr.", "depositum": "44.700 kr.", "forudbetalt": "14.900 kr.", "indflytning": "75.000 kr.", "lejetal": 14900, "acontotal": 500, "ledig": ""}, {"id": "5666466", "billede": "https://image-lambda.boligportal.dk/c69cafe4657dd4cc58f01085dec82491?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Mekanikvej", "omraade": "Brøndby", "husleje": "11.400 kr.", "stoerrelse": "59 m²", "alder": "19 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/59m2-2-vaer-id-5666466", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "700 kr.", "depositum": "34.200 kr.", "forudbetalt": "11.400 kr.", "indflytning": "57.700 kr.", "lejetal": 11400, "acontotal": 700, "ledig": ""}, {"id": "5666454", "billede": "https://image-lambda.boligportal.dk/900b0604e556c30dbd4cbac26cf5ab5d?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Skodsborg Strandvej", "omraade": "Skodsborg", "husleje": "14.500 kr.", "stoerrelse": "62 m²", "alder": "20 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/62m2-2-vaer-id-5666454", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "1.200 kr.", "depositum": "43.500 kr.", "forudbetalt": "14.500 kr.", "indflytning": "73.700 kr.", "lejetal": 14500, "acontotal": 1200, "ledig": ""}, {"id": "5666430", "billede": "https://image-lambda.boligportal.dk/39b1521fbe6be410765ffd6d267db497?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Gråbrødretorv", "omraade": "København K", "husleje": "15.000 kr.", "stoerrelse": "72 m²", "alder": "20 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/72m2-2-vaer-id-5666430", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "1.100 kr.", "depositum": "15.000 kr.", "forudbetalt": "15.000 kr.", "indflytning": "46.100 kr.", "lejetal": 15000, "acontotal": 1100, "ledig": ""}, {"id": "5445092", "billede": "https://image-lambda.boligportal.dk/c3022bdf1cf47471d9b007438720a448?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Gertrude Steins Vej", "omraade": "København S", "husleje": "14.700 kr.", "stoerrelse": "55 m²", "alder": "20 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/55m2-2-vaer-id-5445092", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "550 kr.", "depositum": "44.100 kr.", "forudbetalt": "14.700 kr.", "indflytning": "74.050 kr.", "lejetal": 14700, "acontotal": 550, "ledig": ""}, {"id": "5601564", "billede": "https://image-lambda.boligportal.dk/82dea6e3ead22f10eaf10b052be864fa?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Blegdamsvej", "omraade": "København Ø", "husleje": "14.500 kr.", "stoerrelse": "57 m²", "alder": "21 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/57m2-2-vaer-id-5601564", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "600 kr.", "depositum": "43.500 kr.", "forudbetalt": "26.000 kr.", "indflytning": "84.600 kr.", "lejetal": 14500, "acontotal": 600, "ledig": ""}, {"id": "5666431", "billede": "https://image-lambda.boligportal.dk/c07df5f9f7d3cfdc423b9c9686d49c51?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Sankt Nikolaj Vej", "omraade": "Frederiksberg C", "husleje": "8.800 kr.", "stoerrelse": "54 m²", "alder": "21 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666431", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "400 kr.", "depositum": "26.400 kr.", "forudbetalt": "26.400 kr.", "indflytning": "62.000 kr.", "lejetal": 8800, "acontotal": 400, "ledig": ""}, {"id": "5666403", "billede": "https://image-lambda.boligportal.dk/f75742f6eab2068f7eb869b1d2198e8c?w=600&h=400&fit=crop&crop=focalpoint", "vej": "C.F. Møllers Allé", "omraade": "København S", "husleje": "13.800 kr.", "stoerrelse": "75 m²", "alder": "22 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/75m2-2-vaer-id-5666403", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "850 kr.", "depositum": "41.400 kr.", "forudbetalt": "13.800 kr.", "indflytning": "69.850 kr.", "lejetal": 13800, "acontotal": 850, "ledig": ""}, {"id": "5666365", "billede": "https://image-lambda.boligportal.dk/07a05dcd3aa77d46e8d9988b1d31d7aa?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Østbrovej", "omraade": "Glostrup", "husleje": "6.191,98 kr.", "stoerrelse": "54 m²", "alder": "23 timer siden", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/54m2-2-vaer-id-5666365", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "675 kr.", "depositum": "18.575,94 kr.", "forudbetalt": "18.575,94 kr.", "indflytning": "44.018,86 kr.", "lejetal": 619198, "acontotal": 675, "ledig": ""}, {"id": "5371535", "billede": "https://image-lambda.boligportal.dk/3abcd97b7107be46c798c1445d616e7e?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Bydammen", "omraade": "Ballerup", "husleje": "11.800 kr.", "stoerrelse": "78 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/78m2-2-vaer-id-5371535", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "650 kr.", "depositum": "35.400 kr.", "forudbetalt": "11.800 kr.", "indflytning": "59.650 kr.", "lejetal": 11800, "acontotal": 650, "ledig": ""}, {"id": "5494561", "billede": "https://image-lambda.boligportal.dk/456c27120ff1939240caf53ba1ca4aa2?w=600&h=400&fit=crop&crop=focalpoint", "vej": "Robert Jacobsens Vej", "omraade": "København S", "husleje": "14.900 kr.", "stoerrelse": "73 m²", "alder": "i går", "url": "https://www.boligportal.dk/lejligheder/k%C3%B8benhavn/73m2-2-vaer-id-5494561", "kilde": "BoligPortal", "ny": false, "expat": false, "advarsel": false, "aconto": "1.000 kr.", "depositum": "44.700 kr.", "forudbetalt": "14.900 kr.", "indflytning": "75.500 kr.", "lejetal": 14900, "acontotal": 1000, "ledig": ""}]};
   if (!DATA) return;
 
   var NOEGLE = "boligjagt-profil";
@@ -234,9 +267,81 @@
 
   var liste = document.getElementById("list");
 
+  // --- filter ---------------------------------------------------------
+  var F_NOEGLE = "boligjagt-filter";
+  var fMin = document.getElementById("f-min");
+  var fMax = document.getElementById("f-max");
+  var fAconto = document.getElementById("f-aconto");
+  var fExpat = document.getElementById("f-expat");
+  var fSvar = document.getElementById("filter-svar");
+
+  // Foerste besoeg starter paa 12.000, saa listen ikke pludselig fyldes med
+  // boliger over budget. Derfra bestemmer man selv.
+  var STANDARD_FILTER = { min: null, max: 12000, medAconto: false, skjulExpat: false };
+
+  function laesFilter(){
+    try {
+      var raa = localStorage.getItem(F_NOEGLE);
+      return raa ? JSON.parse(raa) : STANDARD_FILTER;
+    } catch (e) { return STANDARD_FILTER; }
+  }
+  var filter = laesFilter();
+  fMin.value = filter.min != null ? filter.min : "";
+  fMax.value = filter.max != null ? filter.max : "";
+  fAconto.checked = !!filter.medAconto;
+  fExpat.checked = !!filter.skjulExpat;
+
+  function gemFilter(){
+    filter = {
+      min: fMin.value === "" ? null : Number(fMin.value),
+      max: fMax.value === "" ? null : Number(fMax.value),
+      medAconto: fAconto.checked,
+      skjulExpat: fExpat.checked
+    };
+    try { localStorage.setItem(F_NOEGLE, JSON.stringify(filter)); } catch (e) {}
+    tegn();
+  }
+  [fMin, fMax, fAconto, fExpat].forEach(function(f){
+    f.addEventListener("change", gemFilter);
+  });
+
+  /// Månedlig udgift for en bolig, med eller uden aconto.
+  function udgift(b){
+    var leje = b.lejetal || 0;
+    return filter.medAconto ? leje + (b.acontotal || 0) : leje;
+  }
+
+  function slipperIgennem(b){
+    if (filter.skjulExpat && b.expat) return false;
+    var pris = udgift(b);
+    // En bolig uden oplyst pris skjules ikke, den kan jo vaere den rigtige.
+    if (!pris) return true;
+    if (filter.min != null && pris < filter.min) return false;
+    if (filter.max != null && pris > filter.max) return false;
+    return true;
+  }
+
   function tegn(){
     liste.textContent = "";
-    DATA.boliger.forEach(function(b, i){
+    var vist = DATA.boliger.filter(slipperIgennem);
+
+    var beskrivelse = [];
+    if (filter.min != null) beskrivelse.push("fra " + filter.min.toLocaleString("da-DK") + " kr.");
+    if (filter.max != null) beskrivelse.push("til " + filter.max.toLocaleString("da-DK") + " kr.");
+    if (filter.skjulExpat) beskrivelse.push("uden expat-boliger");
+    fSvar.textContent = vist.length === DATA.boliger.length && !beskrivelse.length
+      ? "Viser alle " + DATA.boliger.length + " boliger."
+      : "Viser " + vist.length + " af " + DATA.boliger.length
+        + (beskrivelse.length ? " · " + beskrivelse.join(", ") : "")
+        + (filter.medAconto ? " · aconto regnet med" : "");
+
+    if (!vist.length) {
+      var tom = el("p", "filter-svar", "Ingen boliger passer på filteret. Prøv at hæve grænsen.");
+      liste.appendChild(tom);
+      return;
+    }
+
+    vist.forEach(function(b, i){
       var tekst = besked(b);
       var card = el("article", "card");
 
@@ -268,7 +373,13 @@
       top.appendChild(el("p", "area", b.omraade));
 
       var facts = el("div", "facts");
-      [["Husleje", b.husleje], ["Størrelse", b.stoerrelse]].forEach(function(par){
+      var felter = [["Husleje", b.husleje]];
+      if (b.aconto) felter.push(["Aconto", b.aconto]);
+      if (b.lejetal && b.acontotal) {
+        felter.push(["I alt", (b.lejetal + b.acontotal).toLocaleString("da-DK") + " kr."]);
+      }
+      felter.push(["Størrelse", b.stoerrelse]);
+      felter.forEach(function(par){
         if (!par[1]) return;
         var f = el("div", "fact");
         f.appendChild(el("span", "k", par[0]));
@@ -276,6 +387,16 @@
         facts.appendChild(f);
       });
       if (facts.children.length) top.appendChild(facts);
+
+      if (b.depositum || b.forudbetalt || b.indflytning) {
+        var ud = [];
+        if (b.depositum) ud.push("depositum " + b.depositum);
+        if (b.forudbetalt) ud.push("forudbetalt " + b.forudbetalt);
+        var linje = "Ved indflytning: "
+          + (b.indflytning ? b.indflytning + " i alt" : ud.join(", "));
+        if (b.indflytning && ud.length) linje += " (" + ud.join(", ") + ")";
+        top.appendChild(el("p", "udgift", linje));
+      }
 
       if (b.expat) {
         var e = el("p", "obs");
@@ -286,10 +407,6 @@
         var w = el("p", "obs");
         w.innerHTML = "<b>Usædvanlig lav husleje.</b> Det kan være helt reelt, men det er også et klassisk svindelmønster. Betal aldrig depositum før du har set lejligheden og mødt udlejeren.";
         top.appendChild(w);
-      }
-      if (b.indflytning) {
-        top.appendChild(el("p", "obs", "Indflytningspris oplyst til " + b.indflytning + " kr."
-          + (b.ledig ? " Ledig fra " + b.ledig + "." : "")));
       }
       card.appendChild(top);
 

@@ -1,117 +1,215 @@
 {
  "4441361": {
-  "foerst_set": "2026-09-02T11:15:42.783309+02:00",
-  "oprettet": "2026-09-02T11:15:42.783309+02:00",
+  "detaljer": {
+   "aconto": "2.500 kr.",
+   "depositum": "20.000 kr.",
+   "forudbetalt": "0 kr.",
+   "indflytning": "34.417 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T11:27:33.900157+02:00",
   "vej": "Australiensvej"
  },
- "5350475": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Ericavej"
- },
  "5371535": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T13:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "650 kr.",
+   "depositum": "35.400 kr.",
+   "forudbetalt": "11.800 kr.",
+   "indflytning": "59.650 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T13:27:33.900157+02:00",
   "vej": "Bydammen"
  },
+ "5445092": {
+  "detaljer": {
+   "aconto": "550 kr.",
+   "depositum": "44.100 kr.",
+   "forudbetalt": "14.700 kr.",
+   "indflytning": "74.050 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T17:27:33.900157+02:00",
+  "vej": "Gertrude Steins Vej"
+ },
+ "5494561": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "depositum": "44.700 kr.",
+   "forudbetalt": "14.900 kr.",
+   "indflytning": "75.500 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T13:27:33.900157+02:00",
+  "vej": "Robert Jacobsens Vej"
+ },
  "5530506": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T09:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "0 kr.",
+   "depositum": "18.000 kr.",
+   "forudbetalt": "6.000 kr.",
+   "indflytning": "30.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T09:27:33.900157+02:00",
   "vej": "Niels Finsens Alle"
  },
- "5646502": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Grankoglen"
+ "5601564": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "depositum": "43.500 kr.",
+   "forudbetalt": "26.000 kr.",
+   "indflytning": "84.600 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T16:27:33.900157+02:00",
+  "vej": "Blegdamsvej"
  },
  "5665385": {
-  "foerst_set": "2026-09-02T11:15:42.783309+02:00",
-  "oprettet": "2026-09-02T11:15:42.783309+02:00",
+  "detaljer": {
+   "aconto": "700 kr.",
+   "depositum": "6.800 kr.",
+   "forudbetalt": "6.800 kr.",
+   "indflytning": "21.100 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T11:27:33.900157+02:00",
   "vej": "Johan Wilmanns Vej"
  },
- "5665642": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-08-31T10:36:02.439239+02:00",
-  "vej": "Bobakken"
- },
- "5665857": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-08-31T10:36:02.439239+02:00",
-  "vej": "Filmbyen"
- },
- "5665880": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-08-31T10:36:02.439239+02:00",
-  "vej": "Telegrafvej"
- },
- "5665922": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Kingosgade"
- },
- "5665927": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Virkelund Allé"
- },
- "5665972": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Baneleddet"
- },
- "5666033": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Rådvadsvej"
- },
- "5666230": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T10:36:02.439239+02:00",
-  "vej": "Filmbyen"
- },
  "5666365": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T14:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "675 kr.",
+   "depositum": "18.575,94 kr.",
+   "forudbetalt": "18.575,94 kr.",
+   "indflytning": "44.018,86 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T14:27:33.900157+02:00",
   "vej": "Østbrovej"
  },
+ "5666403": {
+  "detaljer": {
+   "aconto": "850 kr.",
+   "depositum": "41.400 kr.",
+   "forudbetalt": "13.800 kr.",
+   "indflytning": "69.850 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T15:27:33.900157+02:00",
+  "vej": "C.F. Møllers Allé"
+ },
+ "5666430": {
+  "detaljer": {
+   "aconto": "1.100 kr.",
+   "depositum": "15.000 kr.",
+   "forudbetalt": "15.000 kr.",
+   "indflytning": "46.100 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T17:27:33.900157+02:00",
+  "vej": "Gråbrødretorv"
+ },
  "5666431": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T16:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "400 kr.",
+   "depositum": "26.400 kr.",
+   "forudbetalt": "26.400 kr.",
+   "indflytning": "62.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T16:27:33.900157+02:00",
   "vej": "Sankt Nikolaj Vej"
  },
  "5666448": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T10:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "0 kr.",
+   "depositum": "24.000 kr.",
+   "forudbetalt": "0 kr.",
+   "indflytning": "32.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T10:27:33.900157+02:00",
   "vej": "Taastrup have"
  },
+ "5666454": {
+  "detaljer": {
+   "aconto": "1.200 kr.",
+   "depositum": "43.500 kr.",
+   "forudbetalt": "14.500 kr.",
+   "indflytning": "73.700 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T17:27:33.900157+02:00",
+  "vej": "Skodsborg Strandvej"
+ },
+ "5666456": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "depositum": "44.700 kr.",
+   "forudbetalt": "14.900 kr.",
+   "indflytning": "75.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T18:27:33.900157+02:00",
+  "vej": "Rådmandsgade"
+ },
  "5666466": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-01T18:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "700 kr.",
+   "depositum": "34.200 kr.",
+   "forudbetalt": "11.400 kr.",
+   "indflytning": "57.700 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-01T18:27:33.900157+02:00",
   "vej": "Mekanikvej"
  },
  "5666600": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T10:36:02.439239+02:00",
+  "detaljer": {
+   "aconto": "0 kr.",
+   "depositum": "5.000 kr.",
+   "forudbetalt": "7.500 kr.",
+   "indflytning": "20.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T10:27:33.900157+02:00",
   "vej": "Broholms Alle"
  },
+ "5666758": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "depositum": "43.500 kr.",
+   "forudbetalt": "14.500 kr.",
+   "indflytning": "73.000 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T13:27:33.900157+02:00",
+  "vej": "Yderlandsvej"
+ },
  "667997": {
-  "foerst_set": "2026-09-02T11:15:42.783309+02:00",
-  "oprettet": "2026-09-02T09:15:42.783309+02:00",
+  "detaljer": {
+   "aconto": "600 kr.",
+   "depositum": "33.000 kr.",
+   "forudbetalt": "33.000 kr.",
+   "indflytning": "77.600 kr."
+  },
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T09:27:33.900157+02:00",
   "vej": "Kastanie Alle"
  },
  "hh-12171": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T10:36:02.439239+02:00",
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T13:27:33.900157+02:00",
   "vej": "Vedbæk Stationsvej"
  },
  "hh-14291": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T10:36:02.439239+02:00",
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T13:27:33.900157+02:00",
   "vej": "Ordrupvej"
  },
  "hh-8095": {
-  "foerst_set": "2026-09-02T10:36:02.439239+02:00",
-  "oprettet": "2026-09-02T10:36:02.439239+02:00",
+  "foerst_set": "2026-09-02T13:27:33.900157+02:00",
+  "oprettet": "2026-09-02T13:27:33.900157+02:00",
   "vej": "Ryesgade"
  }
 }

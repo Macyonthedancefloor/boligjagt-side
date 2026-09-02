@@ -67,6 +67,16 @@
     outline:none;border-color:var(--patina);box-shadow:0 0 0 3px var(--patina-wash);}
   .gemt{font-size:13px;color:var(--patina-strong);font-weight:600;min-height:18px;}
 
+  /* filter */
+  .filter{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;
+          padding:14px 16px;margin-bottom:22px;display:flex;flex-direction:column;gap:11px;}
+  .filter-raekke{display:flex;gap:12px;}
+  .filter-raekke .felt{flex:1;}
+  .afkryds{display:flex;align-items:center;gap:9px;cursor:pointer;font-size:14px;
+           min-height:32px;}
+  .afkryds input{width:18px;height:18px;accent-color:var(--patina);flex:none;}
+  .filter-svar{font-size:13px;color:var(--muted);font-weight:600;min-height:18px;}
+
   /* kort */
   .list{display:flex;flex-direction:column;gap:16px;}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;
@@ -84,12 +94,13 @@
   .addr{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;
         line-height:1.15;margin:0 0 2px;}
   .area{color:var(--muted);font-size:14px;margin:0 0 12px;}
-  .facts{display:flex;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;}
-  .fact{flex:1;padding:10px 4px 2px;}
+  .facts{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  .fact{flex:1 1 45%;min-width:0;padding:10px 4px 2px;}
   .fact + .fact{border-left:1px solid var(--line);padding-left:12px;}
   .fact .k{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
            color:var(--muted);font-weight:600;}
   .fact .v{font-size:16px;font-weight:600;}
+  .udgift{margin:11px 0 0;font-size:13px;color:var(--muted);line-height:1.45;}
   .obs{margin:12px 0 0;padding:9px 11px;border-radius:8px;font-size:13px;line-height:1.45;
        background:var(--brick-wash);color:var(--brick);}
   .obs b{font-weight:700;}
@@ -149,6 +160,28 @@
       <div class="gemt" id="gemt"></div>
     </div>
   </details>
+
+  <div class="filter">
+    <div class="filter-raekke">
+      <div class="felt">
+        <label for="f-min">Mindst</label>
+        <input id="f-min" type="number" inputmode="numeric" step="500" placeholder="0">
+      </div>
+      <div class="felt">
+        <label for="f-max">Højst</label>
+        <input id="f-max" type="number" inputmode="numeric" step="500" placeholder="ingen grænse">
+      </div>
+    </div>
+    <label class="afkryds">
+      <input id="f-aconto" type="checkbox">
+      <span>Regn aconto med i beløbet</span>
+    </label>
+    <label class="afkryds">
+      <input id="f-expat" type="checkbox">
+      <span>Skjul boliger kun for expats</span>
+    </label>
+    <div class="filter-svar" id="filter-svar"></div>
+  </div>
 
   <div class="list" id="list"></div>
 
@@ -234,9 +267,81 @@
 
   var liste = document.getElementById("list");
 
+  // --- filter ---------------------------------------------------------
+  var F_NOEGLE = "boligjagt-filter";
+  var fMin = document.getElementById("f-min");
+  var fMax = document.getElementById("f-max");
+  var fAconto = document.getElementById("f-aconto");
+  var fExpat = document.getElementById("f-expat");
+  var fSvar = document.getElementById("filter-svar");
+
+  // Foerste besoeg starter paa 12.000, saa listen ikke pludselig fyldes med
+  // boliger over budget. Derfra bestemmer man selv.
+  var STANDARD_FILTER = { min: null, max: 12000, medAconto: false, skjulExpat: false };
+
+  function laesFilter(){
+    try {
+      var raa = localStorage.getItem(F_NOEGLE);
+      return raa ? JSON.parse(raa) : STANDARD_FILTER;
+    } catch (e) { return STANDARD_FILTER; }
+  }
+  var filter = laesFilter();
+  fMin.value = filter.min != null ? filter.min : "";
+  fMax.value = filter.max != null ? filter.max : "";
+  fAconto.checked = !!filter.medAconto;
+  fExpat.checked = !!filter.skjulExpat;
+
+  function gemFilter(){
+    filter = {
+      min: fMin.value === "" ? null : Number(fMin.value),
+      max: fMax.value === "" ? null : Number(fMax.value),
+      medAconto: fAconto.checked,
+      skjulExpat: fExpat.checked
+    };
+    try { localStorage.setItem(F_NOEGLE, JSON.stringify(filter)); } catch (e) {}
+    tegn();
+  }
+  [fMin, fMax, fAconto, fExpat].forEach(function(f){
+    f.addEventListener("change", gemFilter);
+  });
+
+  /// Månedlig udgift for en bolig, med eller uden aconto.
+  function udgift(b){
+    var leje = b.lejetal || 0;
+    return filter.medAconto ? leje + (b.acontotal || 0) : leje;
+  }
+
+  function slipperIgennem(b){
+    if (filter.skjulExpat && b.expat) return false;
+    var pris = udgift(b);
+    // En bolig uden oplyst pris skjules ikke, den kan jo vaere den rigtige.
+    if (!pris) return true;
+    if (filter.min != null && pris < filter.min) return false;
+    if (filter.max != null && pris > filter.max) return false;
+    return true;
+  }
+
   function tegn(){
     liste.textContent = "";
-    DATA.boliger.forEach(function(b, i){
+    var vist = DATA.boliger.filter(slipperIgennem);
+
+    var beskrivelse = [];
+    if (filter.min != null) beskrivelse.push("fra " + filter.min.toLocaleString("da-DK") + " kr.");
+    if (filter.max != null) beskrivelse.push("til " + filter.max.toLocaleString("da-DK") + " kr.");
+    if (filter.skjulExpat) beskrivelse.push("uden expat-boliger");
+    fSvar.textContent = vist.length === DATA.boliger.length && !beskrivelse.length
+      ? "Viser alle " + DATA.boliger.length + " boliger."
+      : "Viser " + vist.length + " af " + DATA.boliger.length
+        + (beskrivelse.length ? " · " + beskrivelse.join(", ") : "")
+        + (filter.medAconto ? " · aconto regnet med" : "");
+
+    if (!vist.length) {
+      var tom = el("p", "filter-svar", "Ingen boliger passer på filteret. Prøv at hæve grænsen.");
+      liste.appendChild(tom);
+      return;
+    }
+
+    vist.forEach(function(b, i){
       var tekst = besked(b);
       var card = el("article", "card");
 
@@ -268,7 +373,13 @@
       top.appendChild(el("p", "area", b.omraade));
 
       var facts = el("div", "facts");
-      [["Husleje", b.husleje], ["Størrelse", b.stoerrelse]].forEach(function(par){
+      var felter = [["Husleje", b.husleje]];
+      if (b.aconto) felter.push(["Aconto", b.aconto]);
+      if (b.lejetal && b.acontotal) {
+        felter.push(["I alt", (b.lejetal + b.acontotal).toLocaleString("da-DK") + " kr."]);
+      }
+      felter.push(["Størrelse", b.stoerrelse]);
+      felter.forEach(function(par){
         if (!par[1]) return;
         var f = el("div", "fact");
         f.appendChild(el("span", "k", par[0]));
@@ -276,6 +387,16 @@
         facts.appendChild(f);
       });
       if (facts.children.length) top.appendChild(facts);
+
+      if (b.depositum || b.forudbetalt || b.indflytning) {
+        var ud = [];
+        if (b.depositum) ud.push("depositum " + b.depositum);
+        if (b.forudbetalt) ud.push("forudbetalt " + b.forudbetalt);
+        var linje = "Ved indflytning: "
+          + (b.indflytning ? b.indflytning + " i alt" : ud.join(", "));
+        if (b.indflytning && ud.length) linje += " (" + ud.join(", ") + ")";
+        top.appendChild(el("p", "udgift", linje));
+      }
 
       if (b.expat) {
         var e = el("p", "obs");
@@ -286,10 +407,6 @@
         var w = el("p", "obs");
         w.innerHTML = "<b>Usædvanlig lav husleje.</b> Det kan være helt reelt, men det er også et klassisk svindelmønster. Betal aldrig depositum før du har set lejligheden og mødt udlejeren.";
         top.appendChild(w);
-      }
-      if (b.indflytning) {
-        top.appendChild(el("p", "obs", "Indflytningspris oplyst til " + b.indflytning + " kr."
-          + (b.ledig ? " Ledig fra " + b.ledig + "." : "")));
       }
       card.appendChild(top);
 
