@@ -221,11 +221,21 @@ def hent_detaljer(url):
     uden = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raa, flags=re.S | re.I)
     uden = re.sub(r"<[^>]+>", " ", uden)
     tekst = re.sub(r"\s+", " ", html.unescape(uden))
+    # Faciliteterne staar som "Altan/terrasse Ja" eller "Moebleret Nej".
+    def har(maerke):
+        m = re.search(re.escape(maerke) + r"\s+(Ja|Nej)", tekst, re.I)
+        return m.group(1).lower() == "ja" if m else None
+
     return {
         "aconto": _tal_efter(tekst, "Aconto"),
         "depositum": _tal_efter(tekst, "Depositum"),
         "forudbetalt": _tal_efter(tekst, "Forudbetalt husleje"),
         "indflytning": _tal_efter(tekst, "Indflytningspris"),
+        "altan": har("Altan/terrasse"),
+        "elevator": har("Elevator"),
+        "moebleret": har("Møbleret"),
+        "delevenlig": har("Delevenlig"),
+        "husdyr": har("Husdyr tilladt"),
     }
 
 # --------------------------------------------------------------------- alder
@@ -327,6 +337,11 @@ def byg_side(annoncer, nye_ider, nu):
             "ny": a["id"] in nye_ider,
             "expat": bool(a.get("kun_expats")),
             "advarsel": bool(a.get("advarsel")),
+            "altan": a.get("altan") is True,
+            "elevator": a.get("elevator") is True,
+            "moebleret": a.get("moebleret") is True,
+            "delevenlig": a.get("delevenlig") is True,
+            "husdyr": a.get("husdyr") is True,
             "aconto": a.get("aconto") or "",
             "depositum": a.get("depositum") or "",
             "forudbetalt": a.get("forudbetalt") or "",
