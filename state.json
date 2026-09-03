@@ -15,6 +15,22 @@
   "oprettet": "2026-09-02T11:06:36.940834+02:00",
   "vej": "Australiensvej"
  },
+ "4584745": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "33.600 kr.",
+   "elevator": true,
+   "forudbetalt": "11.200 kr.",
+   "husdyr": false,
+   "indflytning": "56.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
+  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "vej": "Skjeberg Allé"
+ },
  "4766812": {
   "detaljer": {
    "aconto": "1.500 kr.",
@@ -30,6 +46,70 @@
   "foerst_set": "2026-09-02T16:06:36.940834+02:00",
   "oprettet": "2026-09-02T14:06:36.940834+02:00",
   "vej": "Store Kongensgade"
+ },
+ "4831628": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "32.700 kr.",
+   "elevator": false,
+   "forudbetalt": "10.900 kr.",
+   "husdyr": false,
+   "indflytning": "55.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
+  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "vej": "Sporstræde"
+ },
+ "5022018": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "33.000 kr.",
+   "elevator": false,
+   "forudbetalt": "11.000 kr.",
+   "husdyr": false,
+   "indflytning": "55.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
+  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "vej": "Sporstræde"
+ },
+ "5237585": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "43.200 kr.",
+   "elevator": true,
+   "forudbetalt": "14.400 kr.",
+   "husdyr": false,
+   "indflytning": "72.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
+  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
+ "5264823": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "42.600 kr.",
+   "elevator": false,
+   "forudbetalt": "14.200 kr.",
+   "husdyr": false,
+   "indflytning": "71.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
+  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "vej": "Robert Jacobsens Vej"
  },
  "5518850": {
   "detaljer": {
