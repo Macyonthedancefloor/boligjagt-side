@@ -191,6 +191,22 @@
   "oprettet": "2026-09-02T09:06:36.940834+02:00",
   "vej": "Niels Finsens Alle"
  },
+ "5534630": {
+  "detaljer": {
+   "aconto": "970 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.600 kr.",
+   "elevator": true,
+   "forudbetalt": "14.200 kr.",
+   "husdyr": true,
+   "indflytning": "71.970 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
+  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
  "5659882": {
   "detaljer": {
    "aconto": "700 kr.",
@@ -526,6 +542,54 @@
   "foerst_set": "2026-09-03T15:21:17.979825+02:00",
   "oprettet": "2026-09-03T15:21:17.979825+02:00",
   "vej": "Skærvestræde"
+ },
+ "5667226": {
+  "detaljer": {
+   "aconto": "970 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.000 kr.",
+   "elevator": true,
+   "forudbetalt": "14.000 kr.",
+   "husdyr": true,
+   "indflytning": "70.970 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
+  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
+ "5667227": {
+  "detaljer": {
+   "aconto": "970 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": true,
+   "forudbetalt": "14.500 kr.",
+   "husdyr": true,
+   "indflytning": "73.470 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
+  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
+ "5667228": {
+  "detaljer": {
+   "aconto": "970 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": true,
+   "forudbetalt": "14.500 kr.",
+   "husdyr": true,
+   "indflytning": "73.470 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
+  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "vej": "Robert Jacobsens Vej"
  },
  "667997": {
   "detaljer": {
