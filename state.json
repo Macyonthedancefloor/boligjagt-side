@@ -511,6 +511,22 @@
   "oprettet": "2026-09-03T14:49:50.385807+02:00",
   "vej": "Laurentsvej"
  },
+ "5667182": {
+  "detaljer": {
+   "aconto": null,
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "9.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T15:21:17.979825+02:00",
+  "oprettet": "2026-09-03T15:21:17.979825+02:00",
+  "vej": "Skærvestræde"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
