@@ -127,6 +127,22 @@
   "oprettet": "2026-09-03T10:22:12.207112+02:00",
   "vej": "Robert Jacobsens Vej"
  },
+ "5492974": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.800 kr.",
+   "elevator": true,
+   "forudbetalt": "14.600 kr.",
+   "husdyr": true,
+   "indflytning": "73.750 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
+  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
  "5518850": {
   "detaljer": {
    "aconto": "800 kr.",
@@ -446,6 +462,38 @@
   "foerst_set": "2026-09-03T12:21:24.035216+02:00",
   "oprettet": "2026-09-03T12:21:24.035216+02:00",
   "vej": "Gentoftegade"
+ },
+ "5667154": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "36.600 kr.",
+   "elevator": true,
+   "forudbetalt": "12.200 kr.",
+   "husdyr": true,
+   "indflytning": "61.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
+  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "vej": "Herlev Torv"
+ },
+ "5667155": {
+  "detaljer": {
+   "aconto": "1.050 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "44.700 kr.",
+   "elevator": true,
+   "forudbetalt": "14.900 kr.",
+   "husdyr": true,
+   "indflytning": "75.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
+  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "vej": "Else Alfelts Vej"
  },
  "667997": {
   "detaljer": {
