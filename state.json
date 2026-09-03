@@ -607,6 +607,22 @@
   "oprettet": "2026-09-03T16:47:19.081149+02:00",
   "vej": "Robert Jacobsens Vej"
  },
+ "5667232": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "30.867 kr.",
+   "elevator": false,
+   "forudbetalt": "10.289 kr.",
+   "husdyr": false,
+   "indflytning": "52.245 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T23:19:07.970200+02:00",
+  "oprettet": "2026-09-03T23:19:07.970200+02:00",
+  "vej": "Bjeverskov Alle"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
