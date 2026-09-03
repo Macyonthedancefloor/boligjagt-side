@@ -495,6 +495,22 @@
   "oprettet": "2026-09-03T14:26:23.202956+02:00",
   "vej": "Else Alfelts Vej"
  },
+ "5667165": {
+  "detaljer": {
+   "aconto": "1.500 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "33.000 kr.",
+   "elevator": false,
+   "forudbetalt": "14.500 kr.",
+   "husdyr": false,
+   "indflytning": "62.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T14:49:50.385807+02:00",
+  "oprettet": "2026-09-03T14:49:50.385807+02:00",
+  "vej": "Laurentsvej"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
