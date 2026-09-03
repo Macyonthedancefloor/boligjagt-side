@@ -79,6 +79,22 @@
   "oprettet": "2026-09-02T09:06:36.940834+02:00",
   "vej": "Niels Finsens Alle"
  },
+ "5659882": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "41.985 kr.",
+   "elevator": true,
+   "forudbetalt": "13.995 kr.",
+   "husdyr": false,
+   "indflytning": "70.675 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T08:49:51.107174+02:00",
+  "oprettet": "2026-09-03T08:49:51.107174+02:00",
+  "vej": "Emma Gads Vej"
+ },
  "5665385": {
   "detaljer": {
    "aconto": "700 kr.",
