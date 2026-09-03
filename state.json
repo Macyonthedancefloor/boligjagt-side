@@ -399,6 +399,22 @@
   "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Svanevej"
  },
+ "5667118": {
+  "detaljer": {
+   "aconto": "350 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "37.500 kr.",
+   "elevator": false,
+   "forudbetalt": null,
+   "husdyr": false,
+   "indflytning": "50.350 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-03T12:21:24.035216+02:00",
+  "oprettet": "2026-09-03T12:21:24.035216+02:00",
+  "vej": "Gentoftegade"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
