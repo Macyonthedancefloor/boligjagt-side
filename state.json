@@ -175,6 +175,22 @@
   "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Tingbjerg Ås"
  },
+ "5526428": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.125 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": true,
+   "indflytning": "50.250 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T20:48:27.066058+02:00",
+  "oprettet": "2026-09-03T20:48:27.066058+02:00",
+  "vej": "Sejlbjerg Alle"
+ },
  "5530506": {
   "detaljer": {
    "aconto": "0 kr.",
