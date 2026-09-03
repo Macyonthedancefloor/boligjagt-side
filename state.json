@@ -191,6 +191,22 @@
   "oprettet": "2026-09-03T09:06:36.164317+02:00",
   "vej": "Johan Wilmanns Vej"
  },
+ "5662034": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.500 kr.",
+   "elevator": true,
+   "forudbetalt": "12.500 kr.",
+   "husdyr": true,
+   "indflytning": "63.250 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T11:46:30.714842+02:00",
+  "oprettet": "2026-09-03T11:46:30.714842+02:00",
+  "vej": "Egegårdsvej"
+ },
  "5665385": {
   "detaljer": {
    "aconto": "700 kr.",
