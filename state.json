@@ -95,6 +95,22 @@
   "oprettet": "2026-09-03T10:22:12.207112+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5264804": {
+  "detaljer": {
+   "aconto": "960 kr.",
+   "altan": false,
+   "delevenlig": true,
+   "depositum": "41.700 kr.",
+   "elevator": true,
+   "forudbetalt": "13.900 kr.",
+   "husdyr": false,
+   "indflytning": "70.460 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T13:45:25.929127+02:00",
+  "oprettet": "2026-09-03T13:45:25.929127+02:00",
+  "vej": "Dannebrogsgade"
+ },
  "5264823": {
   "detaljer": {
    "aconto": "800 kr.",
@@ -398,6 +414,22 @@
   "foerst_set": "2026-09-02T16:06:36.940834+02:00",
   "oprettet": "2026-09-02T16:06:36.940834+02:00",
   "vej": "Svanevej"
+ },
+ "5666990": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "22.500 kr.",
+   "elevator": false,
+   "forudbetalt": "7.500 kr.",
+   "husdyr": false,
+   "indflytning": "37.500 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-03T13:45:25.929127+02:00",
+  "oprettet": "2026-09-03T13:45:25.929127+02:00",
+  "vej": "Emil Pipers Vej"
  },
  "5667118": {
   "detaljer": {
