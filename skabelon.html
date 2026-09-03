@@ -305,27 +305,78 @@
     return dele.slice(0, -1).join(", ") + bind + dele[dele.length - 1];
   }
 
-  /// Vaelger fast, men forskelligt, ud fra boligens id, saa den samme bolig
-  /// altid faar den samme formulering.
-  function vaelg(liste, b){
-    var sum = 0;
-    for (var i = 0; i < b.id.length; i++) sum += b.id.charCodeAt(i);
-    return liste[sum % liste.length];
+  /// Vaelger ud fra boligens plads i listen. Listerne har forskellige
+  /// laengder uden faelles divisor, saa aabning, afslutning og huslejelinje
+  /// aldrig falder ens ud to gange i den samme liste.
+  function vaelg(liste, nr){
+    return liste[nr % liste.length];
   }
 
   var AABNINGER = [
     "Jeg skriver, fordi jeg er meget interesseret i lejligheden på {sted}.",
-    "Jeg er meget interesseret i lejligheden på {sted} og håber, jeg må fortælle lidt om os.",
+    "Jeg er meget interesseret i lejligheden på {sted} og håber, jeg må fortælle lidt om {selv}.",
     "Jeg faldt over din annonce for lejligheden på {sted}, og den fangede mig med det samme.",
     "Lejligheden på {sted} ser rigtig fin ud, og jeg vil meget gerne høre mere om den.",
-    "Jeg skriver til dig om lejligheden på {sted}, fordi den passer rigtig godt til det, vi leder efter."
+    "Jeg skriver til dig om lejligheden på {sted}, fordi den passer rigtig godt til det, {jeg} leder efter.",
+    "Din annonce for lejligheden på {sted} fangede min interesse med det samme.",
+    "Jeg vil rigtig gerne høre nærmere om lejligheden på {sted}.",
+    "Lejligheden på {sted} lader til at være præcis det, jeg går og leder efter.",
+    "Jeg har kigget på din annonce for lejligheden på {sted}, og jeg er meget interesseret.",
+    "Jeg skriver, fordi lejligheden på {sted} ser ud til at passe rigtig godt til {mig}.",
+    "Din lejlighed på {sted} har fanget min opmærksomhed, og jeg vil gerne fortælle lidt om {selv}.",
+    "Jeg vil meget gerne søge lejligheden på {sted}, hvis den stadig er ledig."
   ];
 
   var AFSLUTNINGER = [
     "Jeg kommer meget gerne forbi til en fremvisning og fortæller mere. Du er velkommen til at skrive eller ringe.",
-    "Jeg vil rigtig gerne se lejligheden og fortælle mere om os. Du må endelig skrive eller ringe.",
-    "Jeg vil meget gerne forbi og se den. Du er velkommen til at kontakte mig, når det passer dig."
+    "Jeg vil rigtig gerne se lejligheden og fortælle mere om {selv}. Du må endelig skrive eller ringe.",
+    "Jeg vil meget gerne forbi og se den. Du er velkommen til at kontakte mig, når det passer dig.",
+    "Sig endelig til, hvis du vil vise lejligheden frem. Jeg kan komme forbi når som helst, der passer dig.",
+    "Jeg håber at høre fra dig. Jeg stiller gerne op til en fremvisning med kort varsel.",
+    "Skriv eller ring meget gerne, hvis du vil høre mere. Jeg kommer gerne forbi og hilser på.",
+    "Jeg vil blive glad for at høre fra dig, og jeg kommer gerne forbi og ser lejligheden."
   ];
+
+  var HUSLEJELINJER = [
+    "Huslejen på {leje} passer fint med {mit} budget.",
+    "Huslejen på {leje} ligger godt inden for det, {jeg} har regnet med.",
+    "Prisen på {leje} passer rigtig godt til {mit} budget.",
+    "{Jeg} kan sagtens få huslejen på {leje} til at hænge sammen.",
+    "En husleje på {leje} passer fint ind i {min} økonomi."
+  ];
+
+  var TRYGLINJER = [
+    "{Jeg} er {en} {rolig} og {ordentlig} {lejer}, der passer godt på tingene.",
+    "{Jeg} passer godt på det, {jeg} lejer, og er {en} {rolig} {nabo} at have.",
+    "{Jeg} går op i at passe på boligen og være til at have med at gøre."
+  ];
+
+  /// Er der flere om boligen, skal stedordene i flertal. Vi gaetter ud fra
+  /// hvad der staar i "hvem skal bo der".
+  function flertal(){
+    var h = (profil.hvem || "").toLowerCase();
+    return /\bog\b|\bvi\b|\bvores\b|\bto\b|\btre\b|kæreste|samlever|ven|veninde|par\b/.test(h);
+  }
+
+  function stedord(tekst){
+    var f = flertal();
+    var ord = {
+      "{selv}":  f ? "os"     : "mig selv",
+      "{mig}":   f ? "os"     : "mig",
+      "{mit}":   f ? "vores"  : "mit",
+      "{min}":   f ? "vores"  : "min",
+      "{jeg}":   f ? "vi"     : "jeg",
+      "{Jeg}":   f ? "Vi"     : "Jeg",
+      "{en}":    f ? ""       : "en ",
+      "{lejer}": f ? "lejere" : "lejer",
+      "{nabo}":  f ? "naboer" : "nabo",
+      "{rolig}": f ? "rolige" : "rolig",
+      "{ordentlig}": f ? "ordentlige" : "ordentlig"
+    };
+    return tekst.replace(/\{(selv|mig|mit|min|jeg|Jeg|en|lejer|nabo|rolig|ordentlig)\}/g, function(m){
+      return ord[m];
+    }).replace(/ {2,}/g, " ");
+  }
 
   /// En sætning om noget konkret ved boligen, hvis der er noget at sige.
   function detalje(b){
@@ -342,12 +393,12 @@
     return "Især " + ogListe(punkter) + " tiltaler os.";
   }
 
-  function besked(b){
+  function besked(b, nr){
     var sted = b.vej || b.omraade;
     var afsnit = [];
 
     // 1. hvorfor jeg skriver, og hvad jeg kan lide ved boligen
-    var et = [vaelg(AABNINGER, b).replace("{sted}", sted)];
+    var et = [vaelg(AABNINGER, nr).replace("{sted}", sted)];
     var d = detalje(b);
     if (d) et.push(d);
     afsnit.push(et.join(" "));
@@ -375,27 +426,25 @@
     if (ting.length) {
       var t = ogListe(ting, true);
       tryg.push(t.charAt(0).toUpperCase() + t.slice(1) + ".");
-      tryg.push("Vi er rolige og ordentlige lejere, der passer godt på tingene.");
+      tryg.push(vaelg(TRYGLINJER, nr));
     }
     if (profil.ref) tryg.push("Jeg giver naturligvis gerne referencer.");
     if (tryg.length) afsnit.push(tryg.join(" "));
 
     // 4. oekonomi, kun hvis vi kender tallene
     if (b.husleje) {
-      var pris = b.acontotal
-        ? "Huslejen på " + b.husleje + " plus " + b.aconto + " i aconto passer fint med vores budget."
-        : "Huslejen på " + b.husleje + " passer fint med vores budget.";
-      afsnit.push(pris);
+      var beloeb = b.acontotal ? b.husleje + " plus " + b.aconto + " i aconto" : b.husleje;
+      afsnit.push(vaelg(HUSLEJELINJER, nr).replace("{leje}", beloeb));
     }
 
     // 5. afslutning og underskrift
-    afsnit.push(vaelg(AFSLUTNINGER, b));
+    afsnit.push(vaelg(AFSLUTNINGER, nr));
     var slut = ["Mange hilsner"];
     if (profil.navn) slut.push(profil.navn);
     if (profil.kontakt) slut.push(profil.kontakt);
     afsnit.push(slut.join("\n"));
 
-    return "Hej,\n\n" + afsnit.join("\n\n");
+    return stedord("Hej,\n\n" + afsnit.join("\n\n"));
   }
 
   function el(tag, cls, tekst){
@@ -487,7 +536,7 @@
     }
 
     vist.forEach(function(b, i){
-      var tekst = besked(b);
+      var tekst = besked(b, i);
       var card = el("article", "card");
 
       if (b.billede) {
@@ -567,14 +616,14 @@
       var vis = el("button", "toggle");
       vis.type = "button";
       var mid = "m" + i;
-      vis.setAttribute("aria-expanded", "false");
+      vis.setAttribute("aria-expanded", "true");
       vis.setAttribute("aria-controls", mid);
-      var label = el("span", null, "Vis beskeden");
+      var label = el("span", null, "Skjul beskeden");
       vis.appendChild(label);
       card.appendChild(vis);
 
       var msg = el("div", "msg", tekst);
-      msg.id = mid; msg.hidden = true;
+      msg.id = mid; msg.hidden = false;
       card.appendChild(msg);
 
       vis.addEventListener("click", function(){

@@ -95,6 +95,22 @@
   "oprettet": "2026-09-03T08:59:16.283087+02:00",
   "vej": "Emma Gads Vej"
  },
+ "5659978": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": false,
+   "delevenlig": true,
+   "depositum": "31.500 kr.",
+   "elevator": false,
+   "forudbetalt": "10.500 kr.",
+   "husdyr": false,
+   "indflytning": "53.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-03T09:06:36.164317+02:00",
+  "oprettet": "2026-09-03T09:06:36.164317+02:00",
+  "vej": "Johan Wilmanns Vej"
+ },
  "5665385": {
   "detaljer": {
    "aconto": "700 kr.",
