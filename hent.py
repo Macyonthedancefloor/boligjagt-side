@@ -342,6 +342,7 @@ def byg_side(annoncer, nye_ider, nu):
             "moebleret": a.get("moebleret") is True,
             "delevenlig": a.get("delevenlig") is True,
             "husdyr": a.get("husdyr") is True,
+            "timer": round((nu - a["oprettet"]).total_seconds() / 3600, 1),
             "aconto": a.get("aconto") or "",
             "depositum": a.get("depositum") or "",
             "forudbetalt": a.get("forudbetalt") or "",

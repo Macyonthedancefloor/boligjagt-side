@@ -15,22 +15,6 @@
   "oprettet": "2026-09-02T11:06:36.940834+02:00",
   "vej": "Australiensvej"
  },
- "4584745": {
-  "detaljer": {
-   "aconto": "800 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "33.600 kr.",
-   "elevator": true,
-   "forudbetalt": "11.200 kr.",
-   "husdyr": false,
-   "indflytning": "56.800 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
-  "oprettet": "2026-09-03T10:22:12.207112+02:00",
-  "vej": "Skjeberg Allé"
- },
  "4766812": {
   "detaljer": {
    "aconto": "1.500 kr.",
@@ -59,41 +43,9 @@
    "indflytning": "55.300 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
-  "oprettet": "2026-09-03T10:22:12.207112+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T11:00:13.701529+02:00",
   "vej": "Sporstræde"
- },
- "5022018": {
-  "detaljer": {
-   "aconto": "800 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "33.000 kr.",
-   "elevator": false,
-   "forudbetalt": "11.000 kr.",
-   "husdyr": false,
-   "indflytning": "55.800 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
-  "oprettet": "2026-09-03T10:22:12.207112+02:00",
-  "vej": "Sporstræde"
- },
- "5237585": {
-  "detaljer": {
-   "aconto": "800 kr.",
-   "altan": true,
-   "delevenlig": false,
-   "depositum": "43.200 kr.",
-   "elevator": true,
-   "forudbetalt": "14.400 kr.",
-   "husdyr": false,
-   "indflytning": "72.800 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
-  "oprettet": "2026-09-03T10:22:12.207112+02:00",
-  "vej": "Richard Mortensens Vej"
  },
  "5264804": {
   "detaljer": {
@@ -107,25 +59,9 @@
    "indflytning": "70.460 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T13:45:25.929127+02:00",
-  "oprettet": "2026-09-03T13:45:25.929127+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T14:00:13.701529+02:00",
   "vej": "Dannebrogsgade"
- },
- "5264823": {
-  "detaljer": {
-   "aconto": "800 kr.",
-   "altan": false,
-   "delevenlig": false,
-   "depositum": "42.600 kr.",
-   "elevator": false,
-   "forudbetalt": "14.200 kr.",
-   "husdyr": false,
-   "indflytning": "71.800 kr.",
-   "moebleret": false
-  },
-  "foerst_set": "2026-09-03T10:22:12.207112+02:00",
-  "oprettet": "2026-09-03T10:22:12.207112+02:00",
-  "vej": "Robert Jacobsens Vej"
  },
  "5422441": {
   "detaljer": {
@@ -139,8 +75,8 @@
    "indflytning": "73.000 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-04T09:49:00.837149+02:00",
-  "oprettet": "2026-09-04T09:49:00.837149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-04T10:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
  "5492974": {
@@ -155,8 +91,8 @@
    "indflytning": "73.750 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
-  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T14:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
  "5518850": {
@@ -203,8 +139,8 @@
    "indflytning": "50.250 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T20:48:27.066058+02:00",
-  "oprettet": "2026-09-03T20:48:27.066058+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T21:00:13.701529+02:00",
   "vej": "Sejlbjerg Alle"
  },
  "5530506": {
@@ -235,8 +171,8 @@
    "indflytning": "71.970 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
-  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T17:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
  "5625275": {
@@ -251,8 +187,8 @@
    "indflytning": "74.236 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-04T09:49:00.837149+02:00",
-  "oprettet": "2026-09-04T09:49:00.837149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-04T10:00:13.701529+02:00",
   "vej": "Else Alfelts Vej"
  },
  "5659882": {
@@ -299,8 +235,8 @@
    "indflytning": "63.250 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T11:46:30.714842+02:00",
-  "oprettet": "2026-09-03T11:46:30.714842+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T12:00:13.701529+02:00",
   "vej": "Egegårdsvej"
  },
  "5665385": {
@@ -507,8 +443,8 @@
    "indflytning": "37.500 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-03T13:45:25.929127+02:00",
-  "oprettet": "2026-09-03T13:45:25.929127+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T14:00:13.701529+02:00",
   "vej": "Emil Pipers Vej"
  },
  "5667118": {
@@ -523,8 +459,8 @@
    "indflytning": "50.350 kr.",
    "moebleret": true
   },
-  "foerst_set": "2026-09-03T12:21:24.035216+02:00",
-  "oprettet": "2026-09-03T12:21:24.035216+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T13:00:13.701529+02:00",
   "vej": "Gentoftegade"
  },
  "5667154": {
@@ -539,8 +475,8 @@
    "indflytning": "61.800 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
-  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T15:00:13.701529+02:00",
   "vej": "Herlev Torv"
  },
  "5667155": {
@@ -555,8 +491,8 @@
    "indflytning": "75.550 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T14:26:23.202956+02:00",
-  "oprettet": "2026-09-03T14:26:23.202956+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T15:00:13.701529+02:00",
   "vej": "Else Alfelts Vej"
  },
  "5667165": {
@@ -571,8 +507,8 @@
    "indflytning": "62.000 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T14:49:50.385807+02:00",
-  "oprettet": "2026-09-03T14:49:50.385807+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T15:00:13.701529+02:00",
   "vej": "Laurentsvej"
  },
  "5667182": {
@@ -587,8 +523,8 @@
    "indflytning": "9.700 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T15:21:17.979825+02:00",
-  "oprettet": "2026-09-03T15:21:17.979825+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T16:00:13.701529+02:00",
   "vej": "Skærvestræde"
  },
  "5667226": {
@@ -603,8 +539,8 @@
    "indflytning": "70.970 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
-  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T17:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
  "5667227": {
@@ -619,8 +555,8 @@
    "indflytning": "73.470 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
-  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T17:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
  "5667228": {
@@ -635,8 +571,8 @@
    "indflytning": "73.470 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T16:47:19.081149+02:00",
-  "oprettet": "2026-09-03T16:47:19.081149+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-03T17:00:13.701529+02:00",
   "vej": "Robert Jacobsens Vej"
  },
  "5667232": {
@@ -651,8 +587,8 @@
    "indflytning": "52.245 kr.",
    "moebleret": false
   },
-  "foerst_set": "2026-09-03T23:19:07.970200+02:00",
-  "oprettet": "2026-09-03T23:19:07.970200+02:00",
+  "foerst_set": "2026-09-04T10:00:13.701529+02:00",
+  "oprettet": "2026-09-04T00:00:13.701529+02:00",
   "vej": "Bjeverskov Alle"
  },
  "667997": {
