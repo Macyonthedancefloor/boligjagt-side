@@ -655,6 +655,22 @@
   "oprettet": "2026-09-04T14:25:30.006969+02:00",
   "vej": "Grusgraven"
  },
+ "5667603": {
+  "detaljer": {
+   "aconto": "900 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": false,
+   "forudbetalt": "43.500 kr.",
+   "husdyr": false,
+   "indflytning": "102.400 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T15:20:58.422911+02:00",
+  "oprettet": "2026-09-04T15:20:58.422911+02:00",
+  "vej": "Tagensvej"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
