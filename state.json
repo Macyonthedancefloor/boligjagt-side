@@ -127,6 +127,22 @@
   "oprettet": "2026-09-03T10:22:12.207112+02:00",
   "vej": "Robert Jacobsens Vej"
  },
+ "5422441": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.350 kr.",
+   "elevator": true,
+   "forudbetalt": "14.450 kr.",
+   "husdyr": true,
+   "indflytning": "73.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T09:49:00.837149+02:00",
+  "oprettet": "2026-09-04T09:49:00.837149+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
  "5492974": {
   "detaljer": {
    "aconto": "750 kr.",
@@ -222,6 +238,22 @@
   "foerst_set": "2026-09-03T16:47:19.081149+02:00",
   "oprettet": "2026-09-03T16:47:19.081149+02:00",
   "vej": "Richard Mortensens Vej"
+ },
+ "5625275": {
+  "detaljer": {
+   "aconto": "736 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "44.100 kr.",
+   "elevator": true,
+   "forudbetalt": "14.700 kr.",
+   "husdyr": true,
+   "indflytning": "74.236 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T09:49:00.837149+02:00",
+  "oprettet": "2026-09-04T09:49:00.837149+02:00",
+  "vej": "Else Alfelts Vej"
  },
  "5659882": {
   "detaljer": {
