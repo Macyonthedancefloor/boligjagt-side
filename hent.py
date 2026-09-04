@@ -132,8 +132,12 @@ def hent_homesandhousing():
     """
     import urllib.parse
 
+    # Api'et leverer to ad gangen. Loekken stopper selv naar der ikke kommer
+    # nyt, saa loftet er kun en sikring mod at koere i ring. Det skal vaere
+    # rigeligt hoejt: med 12 sider tog vi kun 24 boliger og tabte resten
+    # uden at sige det.
     fundne, sete_id = [], set()
-    for side in range(12):
+    for side in range(60):
         felter = urllib.parse.urlencode({
             "page": side, "language": "da",
             "kvmMin": 0, "kvmMax": 500,
