@@ -173,6 +173,12 @@ def hent_homesandhousing():
             sete_id.add(nid)
             nyt_paa_siden = True
 
+            # Deres api leverer HELE arkivet, ogsaa boliger der forlaengst er
+            # udlejet. Feltet "ribbon" er det eneste der skiller dem ad:
+            # "Ny" er ledig, mens "Udlejet" og "Reserveret" ikke er til at faa.
+            if (bolig.get("ribbon") or "").strip().lower() != "ny":
+                continue
+
             leje = _tal(bolig.get("monthlyRent"))
             if not leje or leje > HH_MAX_LEJE:
                 continue
