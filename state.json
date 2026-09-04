@@ -47,6 +47,22 @@
   "oprettet": "2026-09-03T11:00:13.701529+02:00",
   "vej": "Sporstræde"
  },
+ "5245649": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.400 kr.",
+   "elevator": true,
+   "forudbetalt": "11.800 kr.",
+   "husdyr": true,
+   "indflytning": "60.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T13:33:15.722256+02:00",
+  "oprettet": "2026-09-04T13:33:15.722256+02:00",
+  "vej": "Sømose Hegn"
+ },
  "5264804": {
   "detaljer": {
    "aconto": "960 kr.",
