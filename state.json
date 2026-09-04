@@ -639,6 +639,22 @@
   "oprettet": "2026-09-04T11:21:00.797493+02:00",
   "vej": "Baltorpstræde"
  },
+ "5667577": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "36.600 kr.",
+   "elevator": true,
+   "forudbetalt": "12.200 kr.",
+   "husdyr": true,
+   "indflytning": "61.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T14:25:30.006969+02:00",
+  "oprettet": "2026-09-04T14:25:30.006969+02:00",
+  "vej": "Grusgraven"
+ },
  "667997": {
   "detaljer": {
    "aconto": "600 kr.",
