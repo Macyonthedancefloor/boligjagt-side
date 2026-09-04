@@ -111,6 +111,22 @@
   "oprettet": "2026-09-03T14:00:13.701529+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5515469": {
+  "detaljer": {
+   "aconto": "650 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.200 kr.",
+   "elevator": true,
+   "forudbetalt": "14.400 kr.",
+   "husdyr": true,
+   "indflytning": "72.650 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-04T15:57:53.625289+02:00",
+  "oprettet": "2026-09-04T15:57:53.625289+02:00",
+  "vej": "Martha Christensens Vej"
+ },
  "5518850": {
   "detaljer": {
    "aconto": "800 kr.",
