@@ -303,6 +303,22 @@
   "oprettet": "2026-09-04T15:34:55.904968+02:00",
   "vej": "Tagensvej"
  },
+ "5667791": {
+  "detaljer": {
+   "aconto": "760 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "26.400 kr.",
+   "elevator": false,
+   "forudbetalt": "13.200 kr.",
+   "husdyr": false,
+   "indflytning": "53.560 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-05T16:18:02.350567+02:00",
+  "oprettet": "2026-09-05T16:18:02.350567+02:00",
+  "vej": "Ericaparken"
+ },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T22:34:55.904968+02:00",
