@@ -31,6 +31,22 @@
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Dannebrogsgade"
  },
+ "5389000": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "13.500 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "28.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-06T16:31:51.160736+02:00",
+  "oprettet": "2026-09-06T16:31:51.160736+02:00",
+  "vej": "Etta Camerons Vej"
+ },
  "5422441": {
   "detaljer": {
    "aconto": "750 kr.",
