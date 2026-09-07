@@ -447,6 +447,22 @@
   "oprettet": "2026-09-07T11:22:50.828961+02:00",
   "vej": "Asminderødgade"
  },
+ "5668290": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "40.500 kr.",
+   "elevator": true,
+   "forudbetalt": "13.500 kr.",
+   "husdyr": true,
+   "indflytning": "68.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T13:58:02.381164+02:00",
+  "oprettet": "2026-09-07T13:58:02.381164+02:00",
+  "vej": "Robert Jacobsens Vej"
+ },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T22:34:55.904968+02:00",
