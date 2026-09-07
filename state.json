@@ -367,6 +367,38 @@
   "oprettet": "2026-09-06T13:49:41.094347+02:00",
   "vej": "Sorgenfrigade"
  },
+ "5668180": {
+  "detaljer": {
+   "aconto": "865 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "40.500 kr.",
+   "elevator": false,
+   "forudbetalt": "13.500 kr.",
+   "husdyr": false,
+   "indflytning": "68.365 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T10:00:10.245814+02:00",
+  "oprettet": "2026-09-07T10:00:10.245814+02:00",
+  "vej": "Vallensbæk Stationstorv"
+ },
+ "5668183": {
+  "detaljer": {
+   "aconto": "845 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "40.650 kr.",
+   "elevator": true,
+   "forudbetalt": "13.550 kr.",
+   "husdyr": false,
+   "indflytning": "68.595 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T10:00:10.245814+02:00",
+  "oprettet": "2026-09-07T10:00:10.245814+02:00",
+  "vej": "Skovbrynet"
+ },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T22:34:55.904968+02:00",
