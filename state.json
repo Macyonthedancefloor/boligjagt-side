@@ -95,6 +95,22 @@
   "oprettet": "2026-09-06T13:57:28.913299+02:00",
   "vej": "Edvard Thomsens Vej"
  },
+ "5491843": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.162 kr.",
+   "elevator": true,
+   "forudbetalt": "14.054 kr.",
+   "husdyr": true,
+   "indflytning": "71.070 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T16:21:02.820250+02:00",
+  "oprettet": "2026-09-07T16:21:02.820250+02:00",
+  "vej": "Viola Nørløvs Gade"
+ },
  "5492974": {
   "detaljer": {
    "aconto": "750 kr.",
@@ -110,6 +126,22 @@
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
+ },
+ "5498201": {
+  "detaljer": {
+   "aconto": "866 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "40.800 kr.",
+   "elevator": true,
+   "forudbetalt": "13.600 kr.",
+   "husdyr": true,
+   "indflytning": "68.866 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T16:21:02.820250+02:00",
+  "oprettet": "2026-09-07T16:21:02.820250+02:00",
+  "vej": "Gladsaxevej"
  },
  "5515469": {
   "detaljer": {
@@ -574,6 +606,22 @@
   "foerst_set": "2026-09-07T15:59:44.569299+02:00",
   "oprettet": "2026-09-07T15:59:44.569299+02:00",
   "vej": "Trelleborggade"
+ },
+ "5668397": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "40.599 kr.",
+   "elevator": true,
+   "forudbetalt": "13.533 kr.",
+   "husdyr": true,
+   "indflytning": "68.465 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T16:21:02.820250+02:00",
+  "oprettet": "2026-09-07T16:21:02.820250+02:00",
+  "vej": "Andrea Brochmanns Gade"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
