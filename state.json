@@ -431,6 +431,22 @@
   "oprettet": "2026-09-06T13:49:41.094347+02:00",
   "vej": "Sorgenfrigade"
  },
+ "5668010": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "30.750 kr.",
+   "elevator": false,
+   "forudbetalt": "10.250 kr.",
+   "husdyr": false,
+   "indflytning": "52.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-07T16:37:33.176951+02:00",
+  "oprettet": "2026-09-07T16:37:33.176951+02:00",
+  "vej": "Landlystvej"
+ },
  "5668054": {
   "detaljer": {
    "aconto": "700 kr.",
