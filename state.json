@@ -15,6 +15,22 @@
   "oprettet": "2026-09-04T13:34:55.904968+02:00",
   "vej": "Sømose Hegn"
  },
+ "5263827": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "35.700 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "48.400 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-07T15:04:25.950794+02:00",
+  "oprettet": "2026-09-07T15:04:25.950794+02:00",
+  "vej": "Skovkrogen"
+ },
  "5264804": {
   "detaljer": {
    "aconto": "960 kr.",
