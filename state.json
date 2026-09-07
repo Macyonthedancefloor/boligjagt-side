@@ -383,6 +383,22 @@
   "oprettet": "2026-09-06T13:49:41.094347+02:00",
   "vej": "Sorgenfrigade"
  },
+ "5668054": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "41.700 kr.",
+   "elevator": false,
+   "forudbetalt": "27.800 kr.",
+   "husdyr": false,
+   "indflytning": "84.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T14:50:56.372619+02:00",
+  "oprettet": "2026-09-07T14:50:56.372619+02:00",
+  "vej": "Nordre Fasanvej"
+ },
  "5668163": {
   "detaljer": {
    "aconto": "500 kr.",
@@ -494,6 +510,11 @@
   "foerst_set": "2026-09-07T14:27:09.555641+02:00",
   "oprettet": "2026-09-07T14:27:09.555641+02:00",
   "vej": "Urtehaven"
+ },
+ "hh-5412": {
+  "foerst_set": "2026-09-07T14:50:56.372619+02:00",
+  "oprettet": "2026-09-07T14:50:56.372619+02:00",
+  "vej": "Skovkrogen"
  },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
