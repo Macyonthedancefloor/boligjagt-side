@@ -367,6 +367,22 @@
   "oprettet": "2026-09-06T13:49:41.094347+02:00",
   "vej": "Sorgenfrigade"
  },
+ "5668163": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "32.250 kr.",
+   "elevator": false,
+   "forudbetalt": "21.500 kr.",
+   "husdyr": true,
+   "indflytning": "65.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T11:22:50.828961+02:00",
+  "oprettet": "2026-09-07T11:22:50.828961+02:00",
+  "vej": "Gammelgårds Alle"
+ },
  "5668180": {
   "detaljer": {
    "aconto": "865 kr.",
@@ -398,6 +414,38 @@
   "foerst_set": "2026-09-07T10:00:10.245814+02:00",
   "oprettet": "2026-09-07T10:00:10.245814+02:00",
   "vej": "Skovbrynet"
+ },
+ "5668209": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "34.350 kr.",
+   "elevator": true,
+   "forudbetalt": "34.350 kr.",
+   "husdyr": false,
+   "indflytning": "80.950 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T11:22:50.828961+02:00",
+  "oprettet": "2026-09-07T11:22:50.828961+02:00",
+  "vej": "Strandvejen"
+ },
+ "5668211": {
+  "detaljer": {
+   "aconto": "520 kr.",
+   "altan": false,
+   "delevenlig": true,
+   "depositum": "38.700 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "52.120 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T11:22:50.828961+02:00",
+  "oprettet": "2026-09-07T11:22:50.828961+02:00",
+  "vej": "Asminderødgade"
  },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
