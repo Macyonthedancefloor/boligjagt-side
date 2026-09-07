@@ -527,6 +527,54 @@
   "oprettet": "2026-09-07T14:27:09.555641+02:00",
   "vej": "Urtehaven"
  },
+ "5668378": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "11.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T15:59:44.569299+02:00",
+  "oprettet": "2026-09-07T15:59:44.569299+02:00",
+  "vej": "Trelleborggade"
+ },
+ "5668380": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "12.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T15:59:44.569299+02:00",
+  "oprettet": "2026-09-07T15:59:44.569299+02:00",
+  "vej": "Trelleborggade"
+ },
+ "5668387": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "12.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T15:59:44.569299+02:00",
+  "oprettet": "2026-09-07T15:59:44.569299+02:00",
+  "vej": "Trelleborggade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
