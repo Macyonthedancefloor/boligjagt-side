@@ -143,6 +143,22 @@
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5586398": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.350 kr.",
+   "elevator": true,
+   "forudbetalt": "12.450 kr.",
+   "husdyr": true,
+   "indflytning": "62.950 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T14:27:09.555641+02:00",
+  "oprettet": "2026-09-07T14:27:09.555641+02:00",
+  "vej": "Ruskær"
+ },
  "5625275": {
   "detaljer": {
    "aconto": "736 kr.",
@@ -462,6 +478,22 @@
   "foerst_set": "2026-09-07T13:58:02.381164+02:00",
   "oprettet": "2026-09-07T13:58:02.381164+02:00",
   "vej": "Robert Jacobsens Vej"
+ },
+ "5668312": {
+  "detaljer": {
+   "aconto": "900 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "33.900 kr.",
+   "elevator": true,
+   "forudbetalt": "11.300 kr.",
+   "husdyr": false,
+   "indflytning": "57.400 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-07T14:27:09.555641+02:00",
+  "oprettet": "2026-09-07T14:27:09.555641+02:00",
+  "vej": "Urtehaven"
  },
  "hh-8095": {
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
