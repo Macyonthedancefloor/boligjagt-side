@@ -703,6 +703,54 @@
   "oprettet": "2026-09-08T14:27:29.550015+02:00",
   "vej": "Gerda Louw Larsens Plads"
  },
+ "5668707": {
+  "detaljer": {
+   "aconto": "1.121 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "31.785 kr.",
+   "elevator": false,
+   "forudbetalt": "10.595 kr.",
+   "husdyr": false,
+   "indflytning": "54.096 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T15:22:29.556425+02:00",
+  "oprettet": "2026-09-08T15:22:29.556425+02:00",
+  "vej": "Borups Allé"
+ },
+ "5668714": {
+  "detaljer": {
+   "aconto": "485 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.400 kr.",
+   "elevator": true,
+   "forudbetalt": "11.800 kr.",
+   "husdyr": false,
+   "indflytning": "59.485 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T15:22:29.556425+02:00",
+  "oprettet": "2026-09-08T15:22:29.556425+02:00",
+  "vej": "Østre Teglgade"
+ },
+ "5668716": {
+  "detaljer": {
+   "aconto": "485 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "34.800 kr.",
+   "elevator": true,
+   "forudbetalt": "11.600 kr.",
+   "husdyr": false,
+   "indflytning": "58.485 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T15:22:29.556425+02:00",
+  "oprettet": "2026-09-08T15:22:29.556425+02:00",
+  "vej": "Østre Teglgade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
