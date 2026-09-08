@@ -79,6 +79,22 @@
   "oprettet": "2026-09-04T10:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5438263": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "24.000 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "36.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-08T10:48:10.176350+02:00",
+  "oprettet": "2026-09-08T10:48:10.176350+02:00",
+  "vej": "Olgasvej"
+ },
  "5466996": {
   "detaljer": {
    "aconto": "770 kr.",
