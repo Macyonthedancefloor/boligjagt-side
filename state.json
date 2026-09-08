@@ -63,6 +63,22 @@
   "oprettet": "2026-09-06T16:31:51.160736+02:00",
   "vej": "Etta Camerons Vej"
  },
+ "5414498": {
+  "detaljer": {
+   "aconto": "12.200 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "36.600 kr.",
+   "elevator": true,
+   "forudbetalt": "12.200 kr.",
+   "husdyr": true,
+   "indflytning": "73.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T11:47:26.652340+02:00",
+  "oprettet": "2026-09-08T11:47:26.652340+02:00",
+  "vej": "Spættevangen"
+ },
  "5422441": {
   "detaljer": {
    "aconto": "750 kr.",
