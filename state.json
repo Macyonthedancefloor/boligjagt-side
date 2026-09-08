@@ -671,6 +671,22 @@
   "oprettet": "2026-09-07T16:21:02.820250+02:00",
   "vej": "Andrea Brochmanns Gade"
  },
+ "5668650": {
+  "detaljer": {
+   "aconto": "1.100 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "33.600 kr.",
+   "elevator": true,
+   "forudbetalt": "11.200 kr.",
+   "husdyr": false,
+   "indflytning": "57.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T12:59:01.423703+02:00",
+  "oprettet": "2026-09-08T12:59:01.423703+02:00",
+  "vej": "Urtehaven"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
