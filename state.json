@@ -687,6 +687,22 @@
   "oprettet": "2026-09-08T12:59:01.423703+02:00",
   "vej": "Urtehaven"
  },
+ "5668688": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "42.162 kr.",
+   "elevator": true,
+   "forudbetalt": "14.054 kr.",
+   "husdyr": true,
+   "indflytning": "71.070 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-08T14:27:29.550015+02:00",
+  "oprettet": "2026-09-08T14:27:29.550015+02:00",
+  "vej": "Gerda Louw Larsens Plads"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
