@@ -767,6 +767,22 @@
   "oprettet": "2026-09-08T15:22:29.556425+02:00",
   "vej": "Østre Teglgade"
  },
+ "5668906": {
+  "detaljer": {
+   "aconto": "1.145 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "33.600 kr.",
+   "elevator": true,
+   "forudbetalt": "11.200 kr.",
+   "husdyr": true,
+   "indflytning": "57.145 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T09:59:17.114761+02:00",
+  "oprettet": "2026-09-09T09:59:17.114761+02:00",
+  "vej": "Rønnebygade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
