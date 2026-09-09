@@ -959,6 +959,22 @@
   "oprettet": "2026-09-09T14:51:08.307169+02:00",
   "vej": "Emma Gads Vej"
  },
+ "5669042": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "22.000 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "33.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-09T18:22:19.822521+02:00",
+  "oprettet": "2026-09-09T18:22:19.822521+02:00",
+  "vej": "Bagsværd Hovedgade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
