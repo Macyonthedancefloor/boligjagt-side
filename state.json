@@ -847,6 +847,22 @@
   "oprettet": "2026-09-09T09:59:17.114761+02:00",
   "vej": "Rønnebygade"
  },
+ "5668943": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "41.400 kr.",
+   "elevator": true,
+   "forudbetalt": "13.800 kr.",
+   "husdyr": true,
+   "indflytning": "70.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T10:59:07.296234+02:00",
+  "oprettet": "2026-09-09T10:59:07.296234+02:00",
+  "vej": "Irmavej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
