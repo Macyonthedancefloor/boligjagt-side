@@ -95,6 +95,22 @@
   "oprettet": "2026-09-09T08:26:25.260080+02:00",
   "vej": "Kongelysvej"
  },
+ "5312005": {
+  "detaljer": {
+   "aconto": "1.225 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "33.258 kr.",
+   "elevator": true,
+   "forudbetalt": "11.086 kr.",
+   "husdyr": false,
+   "indflytning": "56.655 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T14:26:50.023715+02:00",
+  "oprettet": "2026-09-09T14:26:50.023715+02:00",
+  "vej": "Ingrid Marievej"
+ },
  "5325090": {
   "detaljer": {
    "aconto": "1.000 kr.",
