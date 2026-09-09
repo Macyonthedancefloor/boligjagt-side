@@ -111,6 +111,22 @@
   "oprettet": "2026-09-09T10:22:14.440745+02:00",
   "vej": "Gammelgårds Alle"
  },
+ "5343230": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.900 kr.",
+   "elevator": true,
+   "forudbetalt": "14.300 kr.",
+   "husdyr": true,
+   "indflytning": "72.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T11:21:39.977601+02:00",
+  "oprettet": "2026-09-09T11:21:39.977601+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
  "5389000": {
   "detaljer": {
    "aconto": "1.000 kr.",
@@ -862,6 +878,22 @@
   "foerst_set": "2026-09-09T10:59:07.296234+02:00",
   "oprettet": "2026-09-09T10:59:07.296234+02:00",
   "vej": "Irmavej"
+ },
+ "5668951": {
+  "detaljer": {
+   "aconto": "1.344 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "44.850 kr.",
+   "elevator": true,
+   "forudbetalt": "29.900 kr.",
+   "husdyr": false,
+   "indflytning": "91.044 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T11:21:39.977601+02:00",
+  "oprettet": "2026-09-09T11:21:39.977601+02:00",
+  "vej": "Bygmestervej"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
