@@ -943,6 +943,22 @@
   "oprettet": "2026-09-09T12:46:59.797301+02:00",
   "vej": "Emma Gads Vej"
  },
+ "5669032": {
+  "detaljer": {
+   "aconto": "650 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "41.985 kr.",
+   "elevator": true,
+   "forudbetalt": "13.995 kr.",
+   "husdyr": false,
+   "indflytning": "70.625 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T14:51:08.307169+02:00",
+  "oprettet": "2026-09-09T14:51:08.307169+02:00",
+  "vej": "Emma Gads Vej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
