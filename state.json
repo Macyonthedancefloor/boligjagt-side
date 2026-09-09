@@ -47,6 +47,22 @@
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Dannebrogsgade"
  },
+ "5299543": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "25.053 kr.",
+   "elevator": false,
+   "forudbetalt": "8.351 kr.",
+   "husdyr": false,
+   "indflytning": "42.355 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T08:26:25.260080+02:00",
+  "oprettet": "2026-09-09T08:26:25.260080+02:00",
+  "vej": "Kongelysvej"
+ },
  "5389000": {
   "detaljer": {
    "aconto": "1.000 kr.",
