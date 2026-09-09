@@ -575,6 +575,22 @@
   "oprettet": "2026-09-07T16:37:33.176951+02:00",
   "vej": "Landlystvej"
  },
+ "5668032": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "45.000 kr.",
+   "elevator": false,
+   "forudbetalt": "15.000 kr.",
+   "husdyr": false,
+   "indflytning": "76.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-09T13:35:48.042532+02:00",
+  "oprettet": "2026-09-09T13:35:48.042532+02:00",
+  "vej": "Holtegade"
+ },
  "5668054": {
   "detaljer": {
    "aconto": "700 kr.",
