@@ -1,4 +1,36 @@
 {
+ "3781888": {
+  "detaljer": {
+   "aconto": "1.200 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "29.700 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "40.800 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-09T10:47:10.561990+02:00",
+  "oprettet": "2026-09-09T10:47:10.561990+02:00",
+  "vej": "Dalstrøget"
+ },
+ "5226013": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "5.000 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "17.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-09T10:47:10.561990+02:00",
+  "oprettet": "2026-09-09T10:47:10.561990+02:00",
+  "vej": "Brysselgade"
+ },
  "5245649": {
   "detaljer": {
    "aconto": "1.000 kr.",
@@ -254,6 +286,22 @@
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
+ },
+ "5550998": {
+  "detaljer": {
+   "aconto": "900 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "45.000 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "60.900 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T10:47:10.561990+02:00",
+  "oprettet": "2026-09-09T10:47:10.561990+02:00",
+  "vej": "Amager Strandvej"
  },
  "5586398": {
   "detaljer": {
