@@ -63,6 +63,22 @@
   "oprettet": "2026-09-09T08:26:25.260080+02:00",
   "vej": "Kongelysvej"
  },
+ "5325090": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "29.700 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": true,
+   "indflytning": "40.600 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-09T10:22:14.440745+02:00",
+  "oprettet": "2026-09-09T10:22:14.440745+02:00",
+  "vej": "Gammelgårds Alle"
+ },
  "5389000": {
   "detaljer": {
    "aconto": "1.000 kr.",
