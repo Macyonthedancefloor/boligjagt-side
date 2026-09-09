@@ -879,6 +879,22 @@
   "oprettet": "2026-09-08T15:22:29.556425+02:00",
   "vej": "Østre Teglgade"
  },
+ "5668784": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "36.000 kr.",
+   "elevator": false,
+   "forudbetalt": "12.000 kr.",
+   "husdyr": false,
+   "indflytning": "60.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-09T20:47:46.994863+02:00",
+  "oprettet": "2026-09-09T20:47:46.994863+02:00",
+  "vej": "Klintholmvej"
+ },
  "5668906": {
   "detaljer": {
    "aconto": "1.145 kr.",
