@@ -1135,6 +1135,22 @@
   "oprettet": "2026-09-10T16:36:44.405703+02:00",
   "vej": "Else Alfelts Vej"
  },
+ "5669386": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "38.700 kr.",
+   "elevator": true,
+   "forudbetalt": "12.900 kr.",
+   "husdyr": false,
+   "indflytning": "65.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T16:59:06.545252+02:00",
+  "oprettet": "2026-09-10T16:59:06.545252+02:00",
+  "vej": "Rovsingsgade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
