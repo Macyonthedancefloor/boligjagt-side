@@ -47,6 +47,22 @@
   "oprettet": "2026-09-04T13:34:55.904968+02:00",
   "vej": "Sømose Hegn"
  },
+ "5248777": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "44.400 kr.",
+   "elevator": true,
+   "forudbetalt": "14.800 kr.",
+   "husdyr": false,
+   "indflytning": "74.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T09:24:23.736939+02:00",
+  "oprettet": "2026-09-10T09:24:23.736939+02:00",
+  "vej": "Robert Jacobsens Vej"
+ },
  "5263827": {
   "detaljer": {
    "aconto": "800 kr.",
