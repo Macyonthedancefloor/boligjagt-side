@@ -1055,6 +1055,22 @@
   "oprettet": "2026-09-10T11:21:07.706538+02:00",
   "vej": "Skovgårdsvej"
  },
+ "5669297": {
+  "detaljer": {
+   "aconto": "450 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "32.700 kr.",
+   "elevator": true,
+   "forudbetalt": "32.700 kr.",
+   "husdyr": false,
+   "indflytning": "76.750 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T12:21:11.736737+02:00",
+  "oprettet": "2026-09-10T12:21:11.736737+02:00",
+  "vej": "Kongelysvej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
