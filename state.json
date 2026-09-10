@@ -207,6 +207,22 @@
   "oprettet": "2026-09-04T10:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5428858": {
+  "detaljer": {
+   "aconto": "1.400 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "29.000 kr.",
+   "elevator": false,
+   "forudbetalt": "14.500 kr.",
+   "husdyr": false,
+   "indflytning": "59.400 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-10T13:19:58.667624+02:00",
+  "oprettet": "2026-09-10T13:19:58.667624+02:00",
+  "vej": "Petersborgvej"
+ },
  "5438263": {
   "detaljer": {
    "aconto": "0 kr.",
