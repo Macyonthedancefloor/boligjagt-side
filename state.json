@@ -1087,6 +1087,38 @@
   "oprettet": "2026-09-10T12:21:11.736737+02:00",
   "vej": "Kongelysvej"
  },
+ "5669344": {
+  "detaljer": {
+   "aconto": "704 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "44.700 kr.",
+   "elevator": true,
+   "forudbetalt": "14.900 kr.",
+   "husdyr": true,
+   "indflytning": "75.204 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T14:51:17.809216+02:00",
+  "oprettet": "2026-09-10T14:51:17.809216+02:00",
+  "vej": "Richard Mortensens Vej"
+ },
+ "5669348": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "38.235 kr.",
+   "elevator": true,
+   "forudbetalt": "12.745 kr.",
+   "husdyr": true,
+   "indflytning": "64.525 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T14:51:17.809216+02:00",
+  "oprettet": "2026-09-10T14:51:17.809216+02:00",
+  "vej": "Baneleddet"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
