@@ -1119,6 +1119,22 @@
   "oprettet": "2026-09-10T14:51:17.809216+02:00",
   "vej": "Baneleddet"
  },
+ "5669382": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "44.550 kr.",
+   "elevator": true,
+   "forudbetalt": "14.850 kr.",
+   "husdyr": true,
+   "indflytning": "74.950 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T16:36:44.405703+02:00",
+  "oprettet": "2026-09-10T16:36:44.405703+02:00",
+  "vej": "Else Alfelts Vej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
