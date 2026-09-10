@@ -1151,6 +1151,22 @@
   "oprettet": "2026-09-10T16:59:06.545252+02:00",
   "vej": "Rovsingsgade"
  },
+ "5669419": {
+  "detaljer": {
+   "aconto": "1.050 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.425 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": true,
+   "indflytning": "50.950 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-10T20:48:19.959490+02:00",
+  "oprettet": "2026-09-10T20:48:19.959490+02:00",
+  "vej": "Næstvedgade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
