@@ -239,6 +239,22 @@
   "oprettet": "2026-09-06T13:57:28.913299+02:00",
   "vej": "Edvard Thomsens Vej"
  },
+ "5477151": {
+  "detaljer": {
+   "aconto": "1.100 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": true,
+   "forudbetalt": "43.500 kr.",
+   "husdyr": false,
+   "indflytning": "102.600 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T11:21:07.706538+02:00",
+  "oprettet": "2026-09-10T11:21:07.706538+02:00",
+  "vej": "Bisiddervej"
+ },
  "5491843": {
   "detaljer": {
    "aconto": "800 kr.",
@@ -1022,6 +1038,22 @@
   "foerst_set": "2026-09-10T10:47:43.339350+02:00",
   "oprettet": "2026-09-10T10:47:43.339350+02:00",
   "vej": "Baneleddet"
+ },
+ "5669272": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "27.000 kr.",
+   "elevator": false,
+   "forudbetalt": "27.000 kr.",
+   "husdyr": false,
+   "indflytning": "63.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T11:21:07.706538+02:00",
+  "oprettet": "2026-09-10T11:21:07.706538+02:00",
+  "vej": "Skovgårdsvej"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
