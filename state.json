@@ -1007,6 +1007,22 @@
   "oprettet": "2026-09-09T18:22:19.822521+02:00",
   "vej": "Bagsværd Hovedgade"
  },
+ "5669260": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.500 kr.",
+   "elevator": true,
+   "forudbetalt": "12.500 kr.",
+   "husdyr": true,
+   "indflytning": "63.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-10T10:47:43.339350+02:00",
+  "oprettet": "2026-09-10T10:47:43.339350+02:00",
+  "vej": "Baneleddet"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
