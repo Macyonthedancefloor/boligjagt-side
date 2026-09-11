@@ -1263,6 +1263,54 @@
   "oprettet": "2026-09-11T12:46:32.181979+02:00",
   "vej": "Sejlbjerg Alle"
  },
+ "5669626": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "41.700 kr.",
+   "elevator": true,
+   "forudbetalt": "13.900 kr.",
+   "husdyr": false,
+   "indflytning": "70.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T13:58:10.432917+02:00",
+  "oprettet": "2026-09-11T13:58:10.432917+02:00",
+  "vej": "Rovsingsgade"
+ },
+ "5669627": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "41.700 kr.",
+   "elevator": true,
+   "forudbetalt": "13.900 kr.",
+   "husdyr": false,
+   "indflytning": "70.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T13:58:10.432917+02:00",
+  "oprettet": "2026-09-11T13:58:10.432917+02:00",
+  "vej": "Rovsingsgade"
+ },
+ "5669632": {
+  "detaljer": {
+   "aconto": "650 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "40.500 kr.",
+   "elevator": true,
+   "forudbetalt": "13.500 kr.",
+   "husdyr": false,
+   "indflytning": "68.150 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T13:58:10.432917+02:00",
+  "oprettet": "2026-09-11T13:58:10.432917+02:00",
+  "vej": "Borgmestervangen"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
