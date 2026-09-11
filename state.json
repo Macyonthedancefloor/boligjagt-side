@@ -1183,6 +1183,22 @@
   "oprettet": "2026-09-10T20:48:19.959490+02:00",
   "vej": "Næstvedgade"
  },
+ "5669528": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.000 kr.",
+   "elevator": false,
+   "forudbetalt": "14.000 kr.",
+   "husdyr": false,
+   "indflytning": "70.600 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-11T09:58:14.985364+02:00",
+  "oprettet": "2026-09-11T09:58:14.985364+02:00",
+  "vej": "Andreas Bjørns Gade"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
