@@ -271,6 +271,22 @@
   "oprettet": "2026-09-10T11:21:07.706538+02:00",
   "vej": "Bisiddervej"
  },
+ "5483476": {
+  "detaljer": {
+   "aconto": "408,33 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.185 kr.",
+   "elevator": true,
+   "forudbetalt": "11.395 kr.",
+   "husdyr": true,
+   "indflytning": "57.383,33 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T09:22:10.003003+02:00",
+  "oprettet": "2026-09-11T09:22:10.003003+02:00",
+  "vej": "Kirkebjerg Parkvej"
+ },
  "5491843": {
   "detaljer": {
    "aconto": "800 kr.",
