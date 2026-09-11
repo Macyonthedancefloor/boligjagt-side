@@ -1199,6 +1199,22 @@
   "oprettet": "2026-09-11T09:58:14.985364+02:00",
   "vej": "Andreas Bjørns Gade"
  },
+ "5669554": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "36.000 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "49.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-11T10:59:35.938738+02:00",
+  "oprettet": "2026-09-11T10:59:35.938738+02:00",
+  "vej": "Lauravej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
