@@ -111,6 +111,22 @@
   "oprettet": "2026-09-09T08:26:25.260080+02:00",
   "vej": "Kongelysvej"
  },
+ "5306346": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "32.400 kr.",
+   "elevator": false,
+   "forudbetalt": "21.600 kr.",
+   "husdyr": false,
+   "indflytning": "65.500 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T11:36:16.578542+02:00",
+  "oprettet": "2026-09-11T11:36:16.578542+02:00",
+  "vej": "Ærtevej"
+ },
  "5312005": {
   "detaljer": {
    "aconto": "1.225 kr.",
