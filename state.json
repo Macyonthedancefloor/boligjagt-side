@@ -271,6 +271,22 @@
   "oprettet": "2026-09-06T13:57:28.913299+02:00",
   "vej": "Edvard Thomsens Vej"
  },
+ "5475478": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "25.785 kr.",
+   "elevator": false,
+   "forudbetalt": "25.785 kr.",
+   "husdyr": false,
+   "indflytning": "60.965 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T14:50:20.975652+02:00",
+  "oprettet": "2026-09-11T14:50:20.975652+02:00",
+  "vej": "Pinievej"
+ },
  "5477151": {
   "detaljer": {
    "aconto": "1.100 kr.",
@@ -446,6 +462,22 @@
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T10:34:55.904968+02:00",
   "vej": "Else Alfelts Vej"
+ },
+ "5646705": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "31.485 kr.",
+   "elevator": false,
+   "forudbetalt": "31.485 kr.",
+   "husdyr": false,
+   "indflytning": "74.265 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T14:50:20.975652+02:00",
+  "oprettet": "2026-09-11T14:50:20.975652+02:00",
+  "vej": "Bagsværd Hovedgade"
  },
  "5667155": {
   "detaljer": {
@@ -1310,6 +1342,22 @@
   "foerst_set": "2026-09-11T13:58:10.432917+02:00",
   "oprettet": "2026-09-11T13:58:10.432917+02:00",
   "vej": "Borgmestervangen"
+ },
+ "5669646": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "34.485 kr.",
+   "elevator": true,
+   "forudbetalt": "11.495 kr.",
+   "husdyr": false,
+   "indflytning": "58.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T14:50:20.975652+02:00",
+  "oprettet": "2026-09-11T14:50:20.975652+02:00",
+  "vej": "Telegrafvej"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
