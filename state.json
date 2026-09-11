@@ -1071,6 +1071,22 @@
   "oprettet": "2026-09-09T18:22:19.822521+02:00",
   "vej": "Bagsværd Hovedgade"
  },
+ "5669113": {
+  "detaljer": {
+   "aconto": "1.100 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "23.700 kr.",
+   "elevator": true,
+   "forudbetalt": "7.900 kr.",
+   "husdyr": false,
+   "indflytning": "40.600 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T12:46:32.181979+02:00",
+  "oprettet": "2026-09-11T12:46:32.181979+02:00",
+  "vej": "Gammelgårds Alle"
+ },
  "5669260": {
   "detaljer": {
    "aconto": "800 kr.",
@@ -1230,6 +1246,22 @@
   "foerst_set": "2026-09-11T10:59:35.938738+02:00",
   "oprettet": "2026-09-11T10:59:35.938738+02:00",
   "vej": "Lauravej"
+ },
+ "5669595": {
+  "detaljer": {
+   "aconto": "458 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.185 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": true,
+   "indflytning": "50.038 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-11T12:46:32.181979+02:00",
+  "oprettet": "2026-09-11T12:46:32.181979+02:00",
+  "vej": "Sejlbjerg Alle"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
