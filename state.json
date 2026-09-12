@@ -367,6 +367,22 @@
   "oprettet": "2026-09-03T22:34:55.904968+02:00",
   "vej": "Richard Mortensens Vej"
  },
+ "5495113": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "29.000 kr.",
+   "elevator": true,
+   "forudbetalt": "29.000 kr.",
+   "husdyr": true,
+   "indflytning": "73.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-12T14:23:10.697494+02:00",
+  "oprettet": "2026-09-12T14:23:10.697494+02:00",
+  "vej": "C.F. Møllers Allé"
+ },
  "5498201": {
   "detaljer": {
    "aconto": "866 kr.",
