@@ -1391,6 +1391,22 @@
   "oprettet": "2026-09-11T14:50:20.975652+02:00",
   "vej": "Telegrafvej"
  },
+ "5669797": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "28.500 kr.",
+   "elevator": false,
+   "forudbetalt": "9.500 kr.",
+   "husdyr": false,
+   "indflytning": "48.000 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-12T20:35:24.451005+02:00",
+  "oprettet": "2026-09-12T20:35:24.451005+02:00",
+  "vej": "Plantevej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
