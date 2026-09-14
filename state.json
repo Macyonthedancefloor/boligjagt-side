@@ -1679,6 +1679,22 @@
   "oprettet": "2026-09-14T12:57:57.099463+02:00",
   "vej": "Teglga"
  },
+ "5670322": {
+  "detaljer": {
+   "aconto": "290 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": false,
+   "forudbetalt": "4.226 kr.",
+   "husdyr": true,
+   "indflytning": "8.452 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T16:23:18.036160+02:00",
+  "oprettet": "2026-09-14T16:23:18.036160+02:00",
+  "vej": "Kingosvej"
+ },
  "5670368": {
   "detaljer": {
    "aconto": "800 kr.",
