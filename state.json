@@ -79,6 +79,22 @@
   "oprettet": "2026-09-14T09:21:49.464075+02:00",
   "vej": "Caroline Amalie Vej"
  },
+ "5159027": {
+  "detaljer": {
+   "aconto": "829 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "38.700 kr.",
+   "elevator": true,
+   "forudbetalt": "12.900 kr.",
+   "husdyr": false,
+   "indflytning": "65.329 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T14:52:28.834425+02:00",
+  "oprettet": "2026-09-14T14:52:28.834425+02:00",
+  "vej": "Bagsværd Hovedgade"
+ },
  "5224406": {
   "detaljer": {
    "aconto": "1.100 kr.",
