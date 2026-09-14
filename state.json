@@ -1967,6 +1967,22 @@
   "oprettet": "2026-09-14T15:23:19.535333+02:00",
   "vej": "Venezuelavej"
  },
+ "5670429": {
+  "detaljer": {
+   "aconto": "900 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "44.100 kr.",
+   "elevator": true,
+   "forudbetalt": "14.700 kr.",
+   "husdyr": false,
+   "indflytning": "74.400 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:48:52.548768+02:00",
+  "oprettet": "2026-09-14T15:48:52.548768+02:00",
+  "vej": "Pladehals Allé"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
