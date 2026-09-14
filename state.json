@@ -1679,6 +1679,294 @@
   "oprettet": "2026-09-14T12:57:57.099463+02:00",
   "vej": "Teglga"
  },
+ "5670368": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": true,
+   "indflytning": "60.050 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670371": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.685 kr.",
+   "elevator": true,
+   "forudbetalt": "11.895 kr.",
+   "husdyr": true,
+   "indflytning": "60.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670374": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.050 kr.",
+   "elevator": true,
+   "forudbetalt": "11.350 kr.",
+   "husdyr": true,
+   "indflytning": "57.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670377": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.385 kr.",
+   "elevator": true,
+   "forudbetalt": "11.795 kr.",
+   "husdyr": true,
+   "indflytning": "59.775 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670380": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": true,
+   "indflytning": "60.050 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670383": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.685 kr.",
+   "elevator": true,
+   "forudbetalt": "11.895 kr.",
+   "husdyr": true,
+   "indflytning": "60.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670386": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.050 kr.",
+   "elevator": true,
+   "forudbetalt": "11.350 kr.",
+   "husdyr": true,
+   "indflytning": "57.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670389": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.385 kr.",
+   "elevator": true,
+   "forudbetalt": "11.795 kr.",
+   "husdyr": true,
+   "indflytning": "59.775 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670392": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": true,
+   "indflytning": "60.050 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670395": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.685 kr.",
+   "elevator": true,
+   "forudbetalt": "11.895 kr.",
+   "husdyr": true,
+   "indflytning": "60.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670398": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.050 kr.",
+   "elevator": true,
+   "forudbetalt": "11.350 kr.",
+   "husdyr": true,
+   "indflytning": "57.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670401": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.385 kr.",
+   "elevator": true,
+   "forudbetalt": "11.795 kr.",
+   "husdyr": true,
+   "indflytning": "59.775 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670404": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": true,
+   "indflytning": "60.050 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670407": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.685 kr.",
+   "elevator": true,
+   "forudbetalt": "11.895 kr.",
+   "husdyr": true,
+   "indflytning": "60.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670410": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.050 kr.",
+   "elevator": true,
+   "forudbetalt": "11.350 kr.",
+   "husdyr": true,
+   "indflytning": "57.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670414": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": true,
+   "indflytning": "60.050 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670417": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "35.685 kr.",
+   "elevator": true,
+   "forudbetalt": "11.895 kr.",
+   "husdyr": true,
+   "indflytning": "60.275 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
+ "5670419": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "34.050 kr.",
+   "elevator": true,
+   "forudbetalt": "11.350 kr.",
+   "husdyr": true,
+   "indflytning": "57.550 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T15:23:19.535333+02:00",
+  "oprettet": "2026-09-14T15:23:19.535333+02:00",
+  "vej": "Venezuelavej"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
