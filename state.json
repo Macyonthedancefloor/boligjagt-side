@@ -1487,6 +1487,38 @@
   "oprettet": "2026-09-12T20:35:24.451005+02:00",
   "vej": "Plantevej"
  },
+ "5670257": {
+  "detaljer": {
+   "aconto": "900 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.600 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "57.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T11:48:10.892350+02:00",
+  "oprettet": "2026-09-14T11:48:10.892350+02:00",
+  "vej": "Amager Strandvej"
+ },
+ "5670258": {
+  "detaljer": {
+   "aconto": "1.000 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "39.000 kr.",
+   "elevator": true,
+   "forudbetalt": "13.000 kr.",
+   "husdyr": false,
+   "indflytning": "66.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T11:48:10.892350+02:00",
+  "oprettet": "2026-09-14T11:48:10.892350+02:00",
+  "vej": "Edvard Thomsens Vej"
+ },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
   "oprettet": "2026-09-07T14:50:56.372619+02:00",
