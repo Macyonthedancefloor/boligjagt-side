@@ -31,6 +31,22 @@
   "oprettet": "2026-09-09T10:47:10.561990+02:00",
   "vej": "Dalstrøget"
  },
+ "4761812": {
+  "detaljer": {
+   "aconto": "850 kr.",
+   "altan": null,
+   "delevenlig": false,
+   "depositum": "21.000 kr.",
+   "elevator": null,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "28.850 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-14T13:59:56.198114+02:00",
+  "oprettet": "2026-09-14T13:59:56.198114+02:00",
+  "vej": "Herlev Hovedgade"
+ },
  "5023047": {
   "detaljer": {
    "aconto": "800 kr.",
@@ -62,6 +78,22 @@
   "foerst_set": "2026-09-14T09:21:49.464075+02:00",
   "oprettet": "2026-09-14T09:21:49.464075+02:00",
   "vej": "Caroline Amalie Vej"
+ },
+ "5224406": {
+  "detaljer": {
+   "aconto": "1.100 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "29.250 kr.",
+   "elevator": true,
+   "forudbetalt": "19.500 kr.",
+   "husdyr": false,
+   "indflytning": "59.600 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T13:59:56.198114+02:00",
+  "oprettet": "2026-09-14T13:59:56.198114+02:00",
+  "vej": "Sigynsgade"
  },
  "5226013": {
   "detaljer": {
