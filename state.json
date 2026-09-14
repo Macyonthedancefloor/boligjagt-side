@@ -511,6 +511,22 @@
   "oprettet": "2026-09-09T10:47:10.561990+02:00",
   "vej": "Amager Strandvej"
  },
+ "5554450": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "37.350 kr.",
+   "elevator": true,
+   "forudbetalt": "12.450 kr.",
+   "husdyr": true,
+   "indflytning": "62.950 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T11:22:48.618679+02:00",
+  "oprettet": "2026-09-14T11:22:48.618679+02:00",
+  "vej": "Ruskær"
+ },
  "5586398": {
   "detaljer": {
    "aconto": "700 kr.",
@@ -542,6 +558,22 @@
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T10:34:55.904968+02:00",
   "vej": "Else Alfelts Vej"
+ },
+ "5644379": {
+  "detaljer": {
+   "aconto": "700 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "34.800 kr.",
+   "elevator": true,
+   "forudbetalt": "11.600 kr.",
+   "husdyr": true,
+   "indflytning": "58.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T11:22:48.618679+02:00",
+  "oprettet": "2026-09-14T11:22:48.618679+02:00",
+  "vej": "Sydvestvej"
  },
  "5646705": {
   "detaljer": {
