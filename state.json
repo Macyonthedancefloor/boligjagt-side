@@ -1551,6 +1551,22 @@
   "oprettet": "2026-09-14T12:02:21.778683+02:00",
   "vej": "Rønnevangshusene"
  },
+ "5670284": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "41.700 kr.",
+   "elevator": false,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "56.200 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-14T12:57:57.099463+02:00",
+  "oprettet": "2026-09-14T12:57:57.099463+02:00",
+  "vej": "Teglga"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
