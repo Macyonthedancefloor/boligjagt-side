@@ -31,6 +31,22 @@
   "oprettet": "2026-09-09T10:47:10.561990+02:00",
   "vej": "Dalstrøget"
  },
+ "5023047": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "44.400 kr.",
+   "elevator": true,
+   "forudbetalt": "14.800 kr.",
+   "husdyr": false,
+   "indflytning": "74.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T13:21:14.525305+02:00",
+  "oprettet": "2026-09-14T13:21:14.525305+02:00",
+  "vej": "Hannemanns Allé"
+ },
  "5144205": {
   "detaljer": {
    "aconto": "800 kr.",
