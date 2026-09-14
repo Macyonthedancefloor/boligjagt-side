@@ -479,6 +479,22 @@
   "oprettet": "2026-09-05T11:43:16.313916+02:00",
   "vej": "Folehaven"
  },
+ "5523321": {
+  "detaljer": {
+   "aconto": "529 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "23.700 kr.",
+   "elevator": false,
+   "forudbetalt": "7.900 kr.",
+   "husdyr": false,
+   "indflytning": "40.029 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T12:02:21.778683+02:00",
+  "oprettet": "2026-09-14T12:02:21.778683+02:00",
+  "vej": "Lindevangshusene"
+ },
  "5534630": {
   "detaljer": {
    "aconto": "970 kr.",
@@ -1518,6 +1534,22 @@
   "foerst_set": "2026-09-14T11:48:10.892350+02:00",
   "oprettet": "2026-09-14T11:48:10.892350+02:00",
   "vej": "Edvard Thomsens Vej"
+ },
+ "5670265": {
+  "detaljer": {
+   "aconto": "460 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "23.700 kr.",
+   "elevator": false,
+   "forudbetalt": "7.900 kr.",
+   "husdyr": false,
+   "indflytning": "39.960 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T12:02:21.778683+02:00",
+  "oprettet": "2026-09-14T12:02:21.778683+02:00",
+  "vej": "Rønnevangshusene"
  },
  "hh-5412": {
   "foerst_set": "2026-09-07T14:50:56.372619+02:00",
