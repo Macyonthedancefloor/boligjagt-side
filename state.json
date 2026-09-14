@@ -1983,6 +1983,38 @@
   "oprettet": "2026-09-14T15:48:52.548768+02:00",
   "vej": "Pladehals Allé"
  },
+ "5670438": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "27.300 kr.",
+   "elevator": null,
+   "forudbetalt": "27.300 kr.",
+   "husdyr": false,
+   "indflytning": "64.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T16:00:16.856266+02:00",
+  "oprettet": "2026-09-14T16:00:16.856266+02:00",
+  "vej": "Uplandsgade"
+ },
+ "5670443": {
+  "detaljer": {
+   "aconto": "650 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "35.550 kr.",
+   "elevator": true,
+   "forudbetalt": "11.850 kr.",
+   "husdyr": false,
+   "indflytning": "59.900 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T16:00:16.856266+02:00",
+  "oprettet": "2026-09-14T16:00:16.856266+02:00",
+  "vej": "Vanløse Allé"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
