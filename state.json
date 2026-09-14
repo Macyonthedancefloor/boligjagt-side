@@ -1,4 +1,20 @@
 {
+ "2747519": {
+  "detaljer": {
+   "aconto": "0 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "31.200 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "41.600 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T10:48:13.895789+02:00",
+  "oprettet": "2026-09-14T10:48:13.895789+02:00",
+  "vej": "Rebæk Søpark"
+ },
  "3781888": {
   "detaljer": {
    "aconto": "1.200 kr.",
@@ -430,6 +446,22 @@
   "foerst_set": "2026-09-04T22:34:55.904968+02:00",
   "oprettet": "2026-09-04T16:34:55.904968+02:00",
   "vej": "Martha Christensens Vej"
+ },
+ "5518831": {
+  "detaljer": {
+   "aconto": "705 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "29.850 kr.",
+   "elevator": true,
+   "forudbetalt": "9.950 kr.",
+   "husdyr": true,
+   "indflytning": "50.455 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-14T10:48:13.895789+02:00",
+  "oprettet": "2026-09-14T10:48:13.895789+02:00",
+  "vej": "Havtornvej"
  },
  "5521087": {
   "detaljer": {
