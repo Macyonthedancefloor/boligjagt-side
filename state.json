@@ -143,6 +143,22 @@
   "oprettet": "2026-09-09T10:47:10.561990+02:00",
   "vej": "Brysselgade"
  },
+ "5235522": {
+  "detaljer": {
+   "aconto": "14.450 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "43.350 kr.",
+   "elevator": true,
+   "forudbetalt": "14.450 kr.",
+   "husdyr": true,
+   "indflytning": "86.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T14:50:49.014689+02:00",
+  "oprettet": "2026-09-15T14:50:49.014689+02:00",
+  "vej": "Ørestads Boulevard"
+ },
  "5245649": {
   "detaljer": {
    "aconto": "1.000 kr.",
@@ -2126,6 +2142,54 @@
   "foerst_set": "2026-09-15T13:34:25.891719+02:00",
   "oprettet": "2026-09-15T13:34:25.891719+02:00",
   "vej": "Ordrupvej"
+ },
+ "5670748": {
+  "detaljer": {
+   "aconto": "11.700 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "35.100 kr.",
+   "elevator": true,
+   "forudbetalt": "11.700 kr.",
+   "husdyr": true,
+   "indflytning": "70.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T14:50:49.014689+02:00",
+  "oprettet": "2026-09-15T14:50:49.014689+02:00",
+  "vej": "Mekanikvej"
+ },
+ "5670749": {
+  "detaljer": {
+   "aconto": "13.200 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "39.600 kr.",
+   "elevator": true,
+   "forudbetalt": "13.200 kr.",
+   "husdyr": true,
+   "indflytning": "79.200 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T14:50:49.014689+02:00",
+  "oprettet": "2026-09-15T14:50:49.014689+02:00",
+  "vej": "Baltorpvej"
+ },
+ "5670750": {
+  "detaljer": {
+   "aconto": "12.500 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "37.500 kr.",
+   "elevator": true,
+   "forudbetalt": "12.500 kr.",
+   "husdyr": true,
+   "indflytning": "75.000 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T14:50:49.014689+02:00",
+  "oprettet": "2026-09-15T14:50:49.014689+02:00",
+  "vej": "Gadelandet"
  },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
