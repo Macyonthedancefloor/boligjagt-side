@@ -2287,6 +2287,22 @@
   "oprettet": "2026-09-15T19:57:19.225496+02:00",
   "vej": "Gertrude Steins Vej"
  },
+ "5670834": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "44.400 kr.",
+   "elevator": true,
+   "forudbetalt": "14.800 kr.",
+   "husdyr": true,
+   "indflytning": "74.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T20:21:18.066076+02:00",
+  "oprettet": "2026-09-15T20:21:18.066076+02:00",
+  "vej": "Svanevej"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
