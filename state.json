@@ -415,6 +415,22 @@
   "oprettet": "2026-09-10T13:19:58.667624+02:00",
   "vej": "Petersborgvej"
  },
+ "5430619": {
+  "detaljer": {
+   "aconto": "1.200 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "43.500 kr.",
+   "elevator": true,
+   "forudbetalt": "43.500 kr.",
+   "husdyr": false,
+   "indflytning": "102.700 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T12:22:03.539108+02:00",
+  "oprettet": "2026-09-15T12:22:03.539108+02:00",
+  "vej": "Vestre Teglgade"
+ },
  "5430635": {
   "detaljer": {
    "aconto": "1.019 kr.",
