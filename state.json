@@ -351,6 +351,22 @@
   "oprettet": "2026-09-08T11:47:26.652340+02:00",
   "vej": "Spættevangen"
  },
+ "5418305": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "41.700 kr.",
+   "elevator": false,
+   "forudbetalt": "13.900 kr.",
+   "husdyr": false,
+   "indflytning": "70.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T09:49:02.759072+02:00",
+  "oprettet": "2026-09-15T09:49:02.759072+02:00",
+  "vej": "Amagerbrogade"
+ },
  "5422441": {
   "detaljer": {
    "aconto": "750 kr.",
