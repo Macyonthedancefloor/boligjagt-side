@@ -2111,6 +2111,22 @@
   "oprettet": "2026-09-15T10:50:26.363313+02:00",
   "vej": "Lindgreens Allé"
  },
+ "5670694": {
+  "detaljer": {
+   "aconto": "950 kr.",
+   "altan": false,
+   "delevenlig": false,
+   "depositum": "36.000 kr.",
+   "elevator": false,
+   "forudbetalt": "1 kr.",
+   "husdyr": false,
+   "indflytning": "48.951 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T13:34:25.891719+02:00",
+  "oprettet": "2026-09-15T13:34:25.891719+02:00",
+  "vej": "Ordrupvej"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
