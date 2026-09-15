@@ -2207,6 +2207,54 @@
   "oprettet": "2026-09-15T14:50:49.014689+02:00",
   "vej": "Gadelandet"
  },
+ "5670773": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "12.400 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T15:59:28.767687+02:00",
+  "oprettet": "2026-09-15T15:59:28.767687+02:00",
+  "vej": "Trelleborggade"
+ },
+ "5670775": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "11.500 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T15:59:28.767687+02:00",
+  "oprettet": "2026-09-15T15:59:28.767687+02:00",
+  "vej": "Trelleborggade"
+ },
+ "5670776": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "0 kr.",
+   "elevator": true,
+   "forudbetalt": "0 kr.",
+   "husdyr": false,
+   "indflytning": "11.600 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T15:59:28.767687+02:00",
+  "oprettet": "2026-09-15T15:59:28.767687+02:00",
+  "vej": "Trelleborggade"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
