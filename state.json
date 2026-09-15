@@ -175,6 +175,22 @@
   "oprettet": "2026-09-15T14:50:49.014689+02:00",
   "vej": "Ørestads Boulevard"
  },
+ "5243971": {
+  "detaljer": {
+   "aconto": "14.300 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "42.900 kr.",
+   "elevator": true,
+   "forudbetalt": "14.300 kr.",
+   "husdyr": true,
+   "indflytning": "85.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T20:48:15.179760+02:00",
+  "oprettet": "2026-09-15T20:48:15.179760+02:00",
+  "vej": "Ørestads Boulevard"
+ },
  "5245649": {
   "detaljer": {
    "aconto": "1.000 kr.",
