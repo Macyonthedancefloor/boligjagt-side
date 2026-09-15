@@ -2063,6 +2063,38 @@
   "oprettet": "2026-09-14T16:00:16.856266+02:00",
   "vej": "Vanløse Allé"
  },
+ "5670585": {
+  "detaljer": {
+   "aconto": "500 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "29.800 kr.",
+   "elevator": false,
+   "forudbetalt": "14.900 kr.",
+   "husdyr": false,
+   "indflytning": "60.100 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T10:50:26.363313+02:00",
+  "oprettet": "2026-09-15T10:50:26.363313+02:00",
+  "vej": "Krogerupgade"
+ },
+ "5670627": {
+  "detaljer": {
+   "aconto": "750 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "44.850 kr.",
+   "elevator": true,
+   "forudbetalt": "14.950 kr.",
+   "husdyr": true,
+   "indflytning": "75.500 kr.",
+   "moebleret": true
+  },
+  "foerst_set": "2026-09-15T10:50:26.363313+02:00",
+  "oprettet": "2026-09-15T10:50:26.363313+02:00",
+  "vej": "Lindgreens Allé"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
