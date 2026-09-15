@@ -47,6 +47,22 @@
   "oprettet": "2026-09-14T13:59:56.198114+02:00",
   "vej": "Herlev Hovedgade"
  },
+ "4810099": {
+  "detaljer": {
+   "aconto": "800 kr.",
+   "altan": true,
+   "delevenlig": false,
+   "depositum": "42.900 kr.",
+   "elevator": false,
+   "forudbetalt": "14.300 kr.",
+   "husdyr": false,
+   "indflytning": "72.300 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T10:23:32.180052+02:00",
+  "oprettet": "2026-09-15T10:23:32.180052+02:00",
+  "vej": "Else Alfelts Vej"
+ },
  "5023047": {
   "detaljer": {
    "aconto": "800 kr.",
