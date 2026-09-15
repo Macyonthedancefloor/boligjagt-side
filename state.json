@@ -2271,6 +2271,22 @@
   "oprettet": "2026-09-15T17:00:03.611814+02:00",
   "vej": "Pakkerivej"
  },
+ "5670831": {
+  "detaljer": {
+   "aconto": "14.300 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "42.900 kr.",
+   "elevator": true,
+   "forudbetalt": "14.300 kr.",
+   "husdyr": true,
+   "indflytning": "85.800 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T19:57:19.225496+02:00",
+  "oprettet": "2026-09-15T19:57:19.225496+02:00",
+  "vej": "Gertrude Steins Vej"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
