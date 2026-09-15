@@ -95,6 +95,22 @@
   "oprettet": "2026-09-14T09:21:49.464075+02:00",
   "vej": "Caroline Amalie Vej"
  },
+ "5151558": {
+  "detaljer": {
+   "aconto": "600 kr.",
+   "altan": false,
+   "delevenlig": true,
+   "depositum": "41.685 kr.",
+   "elevator": true,
+   "forudbetalt": "13.895 kr.",
+   "husdyr": true,
+   "indflytning": "70.075 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T15:23:42.083765+02:00",
+  "oprettet": "2026-09-15T15:23:42.083765+02:00",
+  "vej": "Ørestads Boulevard"
+ },
  "5159027": {
   "detaljer": {
    "aconto": "829 kr.",
