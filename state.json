@@ -2255,6 +2255,22 @@
   "oprettet": "2026-09-15T15:59:28.767687+02:00",
   "vej": "Trelleborggade"
  },
+ "5670787": {
+  "detaljer": {
+   "aconto": "675 kr.",
+   "altan": true,
+   "delevenlig": true,
+   "depositum": "44.700 kr.",
+   "elevator": true,
+   "forudbetalt": "14.900 kr.",
+   "husdyr": false,
+   "indflytning": "75.175 kr.",
+   "moebleret": false
+  },
+  "foerst_set": "2026-09-15T17:00:03.611814+02:00",
+  "oprettet": "2026-09-15T17:00:03.611814+02:00",
+  "vej": "Pakkerivej"
+ },
  "hh-14407": {
   "foerst_set": "2026-09-14T12:36:58.885937+02:00",
   "oprettet": "2026-09-14T12:36:58.885937+02:00",
